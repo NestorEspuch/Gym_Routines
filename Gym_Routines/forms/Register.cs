@@ -57,11 +57,11 @@ namespace Gym_Routines
                     textBoxPwd.Text+";"+textBoxEmail.Text);
                 
                 writer.Close();
-                textBoxInfo.Text = "USUARIO CREADO";
+                boxInfo.Text = "USUARIO CREADO";
             }
             catch (IOException error)
             {
-                textBoxInfo.Text = "ERROR";
+                boxInfo.Text = "ERROR";
                 Console.WriteLine("Error de escritura en archivo users.txt: " + error.Message);
             }
         }

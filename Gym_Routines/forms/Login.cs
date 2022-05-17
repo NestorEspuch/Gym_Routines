@@ -101,7 +101,8 @@ namespace Gym_Routines
             }
             else
             {
-
+                boxInfo.Text = "User no exist";
+                Console.WriteLine("El usuario no se encuentra registrado");
             }
         }
     }

@@ -45,8 +45,8 @@ namespace Gym_Routines
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.labelEmail = new System.Windows.Forms.Label();
             this.btnRegister = new System.Windows.Forms.Button();
-            this.textBoxInfo = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.boxInfo = new System.Windows.Forms.TextBox();
             this.panelTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
@@ -231,25 +231,23 @@ namespace Gym_Routines
             this.btnRegister.UseVisualStyleBackColor = false;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
-            // textBoxInfo
-            // 
-            this.textBoxInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.textBoxInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxInfo.HideSelection = false;
-            this.textBoxInfo.Location = new System.Drawing.Point(58, 489);
-            this.textBoxInfo.Multiline = true;
-            this.textBoxInfo.Name = "textBoxInfo";
-            this.textBoxInfo.Size = new System.Drawing.Size(358, 34);
-            this.textBoxInfo.TabIndex = 16;
-            this.textBoxInfo.TabStop = false;
-            this.textBoxInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBoxInfo.Visible = false;
-            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // boxInfo
+            // 
+            this.boxInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.boxInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.boxInfo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.boxInfo.ForeColor = System.Drawing.Color.Red;
+            this.boxInfo.Location = new System.Drawing.Point(94, 493);
+            this.boxInfo.Name = "boxInfo";
+            this.boxInfo.Size = new System.Drawing.Size(283, 25);
+            this.boxInfo.TabIndex = 16;
+            this.boxInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Register
             // 
@@ -257,7 +255,7 @@ namespace Gym_Routines
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.ClientSize = new System.Drawing.Size(475, 717);
-            this.Controls.Add(this.textBoxInfo);
+            this.Controls.Add(this.boxInfo);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.labelEmail);
@@ -300,7 +298,7 @@ namespace Gym_Routines
         private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.Label labelEmail;
         private System.Windows.Forms.Button btnRegister;
-        private System.Windows.Forms.TextBox textBoxInfo;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.TextBox boxInfo;
     }
 }
