@@ -207,6 +207,7 @@ namespace Gym_Routines
             this.cbRemember.TabIndex = 7;
             this.cbRemember.Text = "Remember user";
             this.cbRemember.UseVisualStyleBackColor = true;
+            this.cbRemember.CheckedChanged += new System.EventHandler(this.cbRemember_CheckedChanged);
             // 
             // btnLogin
             // 

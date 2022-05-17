@@ -14,8 +14,30 @@ namespace Gym_Routines
         public Login()
         {
             InitializeComponent();
+            if (File.Exists("../../../data/rememberUser.txt"))
+            {
+                fillUser();
+            }
         }
-
+        private void fillUser()
+        {
+            try
+            {
+                StreamReader file = new StreamReader("../../../data/rememberUser.txt");
+                string line = file.ReadLine();
+                if(line != null)
+                {
+                    string[] split = line.Split(';');
+                    boxUser.Text = split[0];
+                    boxPwd.Text = split[1];
+                }
+                file.Close();
+            }
+            catch(IOException error)
+            {
+                Console.WriteLine("Error de lectura de rememberUser.txt: "+error.Message);
+            }
+        }
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -104,6 +126,23 @@ namespace Gym_Routines
                 boxInfo.Text = "User no exist";
                 Console.WriteLine("El usuario no se encuentra registrado");
             }
+        }
+        private void saveRemenberUser()
+        {
+            try
+            {
+                StreamWriter writer = new StreamWriter("../../../data/rememberUser.txt");
+                writer.Write(boxUser.Text+";"+boxPwd.Text);
+                writer.Close();
+            }
+            catch(IOException error)
+            {
+                Console.WriteLine("Error al guardar usuario: "+error.Message);
+            }
+        }
+        private void cbRemember_CheckedChanged(object sender, EventArgs e)
+        {
+            saveRemenberUser();
         }
     }
 }
