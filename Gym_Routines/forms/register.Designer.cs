@@ -1,0 +1,306 @@
+﻿
+namespace Gym_Routines
+{
+    partial class Register
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
+            this.labelTitle = new System.Windows.Forms.Label();
+            this.panelTitulo = new System.Windows.Forms.Panel();
+            this.btnMinimizar = new System.Windows.Forms.PictureBox();
+            this.btnCerrar = new System.Windows.Forms.PictureBox();
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.textBoxPwd = new System.Windows.Forms.TextBox();
+            this.labelPwd = new System.Windows.Forms.Label();
+            this.textBoxUser = new System.Windows.Forms.TextBox();
+            this.labelUser = new System.Windows.Forms.Label();
+            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.labelName = new System.Windows.Forms.Label();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.labelEmail = new System.Windows.Forms.Label();
+            this.btnRegister = new System.Windows.Forms.Button();
+            this.textBoxInfo = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.panelTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // labelTitle
+            // 
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelTitle.ForeColor = System.Drawing.Color.Silver;
+            this.labelTitle.Location = new System.Drawing.Point(14, 12);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(192, 30);
+            this.labelTitle.TabIndex = 4;
+            this.labelTitle.Text = "GYM ROUTINES";
+            // 
+            // panelTitulo
+            // 
+            this.panelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            this.panelTitulo.Controls.Add(this.labelTitle);
+            this.panelTitulo.Controls.Add(this.btnMinimizar);
+            this.panelTitulo.Controls.Add(this.btnCerrar);
+            this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitulo.Location = new System.Drawing.Point(0, 0);
+            this.panelTitulo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelTitulo.Name = "panelTitulo";
+            this.panelTitulo.Size = new System.Drawing.Size(475, 56);
+            this.panelTitulo.TabIndex = 1;
+            this.panelTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitulo_MouseDown);
+            this.panelTitulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTitulo_MouseMove);
+            this.panelTitulo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelTitulo_MouseUp);
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
+            this.btnMinimizar.Location = new System.Drawing.Point(426, 0);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(16, 56);
+            this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnMinimizar.TabIndex = 3;
+            this.btnMinimizar.TabStop = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
+            this.btnCerrar.Location = new System.Drawing.Point(449, 0);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(16, 56);
+            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnCerrar.TabIndex = 2;
+            this.btnCerrar.TabStop = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
+            // 
+            // textBoxPwd
+            // 
+            this.textBoxPwd.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxPwd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxPwd.Location = new System.Drawing.Point(58, 319);
+            this.textBoxPwd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxPwd.Name = "textBoxPwd";
+            this.textBoxPwd.Size = new System.Drawing.Size(357, 32);
+            this.textBoxPwd.TabIndex = 10;
+            // 
+            // labelPwd
+            // 
+            this.labelPwd.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelPwd.AutoSize = true;
+            this.labelPwd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelPwd.ForeColor = System.Drawing.Color.Silver;
+            this.labelPwd.Location = new System.Drawing.Point(58, 287);
+            this.labelPwd.Name = "labelPwd";
+            this.labelPwd.Size = new System.Drawing.Size(103, 23);
+            this.labelPwd.TabIndex = 9;
+            this.labelPwd.Text = "Password";
+            // 
+            // textBoxUser
+            // 
+            this.textBoxUser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxUser.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxUser.Location = new System.Drawing.Point(58, 233);
+            this.textBoxUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxUser.Name = "textBoxUser";
+            this.textBoxUser.Size = new System.Drawing.Size(357, 32);
+            this.textBoxUser.TabIndex = 9;
+            // 
+            // labelUser
+            // 
+            this.labelUser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelUser.AutoSize = true;
+            this.labelUser.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelUser.ForeColor = System.Drawing.Color.Silver;
+            this.labelUser.Location = new System.Drawing.Point(58, 201);
+            this.labelUser.Name = "labelUser";
+            this.labelUser.Size = new System.Drawing.Size(50, 23);
+            this.labelUser.TabIndex = 7;
+            this.labelUser.Text = "User";
+            // 
+            // textBoxName
+            // 
+            this.textBoxName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxName.Location = new System.Drawing.Point(58, 152);
+            this.textBoxName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(357, 32);
+            this.textBoxName.TabIndex = 8;
+            // 
+            // labelName
+            // 
+            this.labelName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelName.AutoSize = true;
+            this.labelName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelName.ForeColor = System.Drawing.Color.Silver;
+            this.labelName.Location = new System.Drawing.Point(58, 120);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(106, 23);
+            this.labelName.TabIndex = 11;
+            this.labelName.Text = "Full name";
+            // 
+            // textBoxEmail
+            // 
+            this.textBoxEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxEmail.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxEmail.Location = new System.Drawing.Point(58, 400);
+            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(357, 32);
+            this.textBoxEmail.TabIndex = 11;
+            // 
+            // labelEmail
+            // 
+            this.labelEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelEmail.AutoSize = true;
+            this.labelEmail.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelEmail.ForeColor = System.Drawing.Color.Silver;
+            this.labelEmail.Location = new System.Drawing.Point(58, 368);
+            this.labelEmail.Name = "labelEmail";
+            this.labelEmail.Size = new System.Drawing.Size(69, 23);
+            this.labelEmail.TabIndex = 15;
+            this.labelEmail.Text = "E-mail";
+            // 
+            // btnRegister
+            // 
+            this.btnRegister.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRegister.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnRegister.FlatAppearance.BorderSize = 0;
+            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegister.ForeColor = System.Drawing.Color.White;
+            this.btnRegister.Location = new System.Drawing.Point(58, 571);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(358, 60);
+            this.btnRegister.TabIndex = 12;
+            this.btnRegister.Text = "Register";
+            this.btnRegister.UseVisualStyleBackColor = false;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            // 
+            // textBoxInfo
+            // 
+            this.textBoxInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.textBoxInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxInfo.HideSelection = false;
+            this.textBoxInfo.Location = new System.Drawing.Point(58, 489);
+            this.textBoxInfo.Multiline = true;
+            this.textBoxInfo.Name = "textBoxInfo";
+            this.textBoxInfo.Size = new System.Drawing.Size(358, 34);
+            this.textBoxInfo.TabIndex = 16;
+            this.textBoxInfo.TabStop = false;
+            this.textBoxInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxInfo.Visible = false;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // Register
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.ClientSize = new System.Drawing.Size(475, 717);
+            this.Controls.Add(this.textBoxInfo);
+            this.Controls.Add(this.btnRegister);
+            this.Controls.Add(this.textBoxEmail);
+            this.Controls.Add(this.labelEmail);
+            this.Controls.Add(this.textBoxName);
+            this.Controls.Add(this.labelName);
+            this.Controls.Add(this.textBoxPwd);
+            this.Controls.Add(this.labelPwd);
+            this.Controls.Add(this.textBoxUser);
+            this.Controls.Add(this.labelUser);
+            this.Controls.Add(this.panelTitulo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "Register";
+            this.Text = "register";
+            this.panelTitulo.ResumeLayout(false);
+            this.panelTitulo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Label labelTitle;
+        private System.Windows.Forms.Panel panelTitulo;
+        private System.Windows.Forms.PictureBox btnMinimizar;
+        private System.Windows.Forms.PictureBox btnCerrar;
+        private System.IO.FileSystemWatcher fileSystemWatcher1;
+        private System.Windows.Forms.TextBox textBoxName;
+        private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.TextBox textBoxPwd;
+        private System.Windows.Forms.Label labelPwd;
+        private System.Windows.Forms.TextBox textBoxUser;
+        private System.Windows.Forms.Label labelUser;
+        private System.Windows.Forms.TextBox textBoxEmail;
+        private System.Windows.Forms.Label labelEmail;
+        private System.Windows.Forms.Button btnRegister;
+        private System.Windows.Forms.TextBox textBoxInfo;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+    }
+}
