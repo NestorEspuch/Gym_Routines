@@ -20,13 +20,13 @@ namespace Gym_Routines.forms
             try
             {
                 StreamWriter file = File.AppendText("../../../data/dietas.txt");
-                file.WriteLine(textBox1Food+","+textBox1Calories+","+textBox1Proteins+","+textBox1Hydrates+
-                    ","+textBox1Fats+","+ textBox2Food + "," + textBox2Calories + "," + textBox2Proteins + 
-                    "," + textBox2Hydrates + textBox2Fats+","+ textBox3Food + "," + textBox3Calories + "," + 
-                    textBox3Proteins + "," + textBox3Hydrates +","+textBox3Fats+","+
-                    textBox4Food + "," + textBox4Calories + "," + textBox4Proteins + "," + textBox4Hydrates +
-                    ","+textBox4Fats+","+ textBox5Food + "," + textBox5Calories + "," + textBox5Proteins + 
-                    "," + textBox5Hydrates +","+textBox5Fats+","+textBoxType);
+                file.Write("\n"+textBox1Food.Text+","+textBox1Calories.Text+","+textBox1Proteins.Text+","+textBox1Hydrates.Text+
+                    ","+textBox1Fats.Text+","+ textBox2Food.Text + "," + textBox2Calories.Text + "," + textBox2Proteins.Text + 
+                    "," + textBox2Hydrates.Text + textBox2Fats.Text+","+ textBox3Food.Text + "," + textBox3Calories.Text + "," + 
+                    textBox3Proteins.Text + "," + textBox3Hydrates.Text +","+textBox3Fats.Text+","+
+                    textBox4Food.Text + "," + textBox4Calories.Text + "," + textBox4Proteins.Text + "," + textBox4Hydrates.Text +
+                    ","+textBox4Fats.Text+","+ textBox5Food.Text + "," + textBox5Calories.Text + "," + textBox5Proteins.Text + 
+                    "," + textBox5Hydrates.Text +","+textBox5Fats.Text+","+textBoxType.Text);
                 file.Close();
                 textBoxInfo.Text = "Properly stored diet";
             }

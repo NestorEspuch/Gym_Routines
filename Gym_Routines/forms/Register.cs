@@ -53,9 +53,9 @@ namespace Gym_Routines
             try
             {
                 StreamWriter writer = File.AppendText("../../../data/users.txt");
-                writer.WriteLineAsync(textBoxName.Text+";"+textBoxUser.Text+";"+
-                    textBoxPwd.Text+";"+textBoxEmail.Text);
-                
+                writer.Write("\n" + textBoxName.Text + ";" + textBoxUser.Text + ";" +
+                    textBoxPwd.Text + ";" + textBoxEmail.Text);
+
                 writer.Close();
                 boxInfo.Text = "USUARIO CREADO";
             }
@@ -68,9 +68,58 @@ namespace Gym_Routines
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            saveUser();
-            Thread.Sleep(1900);
-            this.Hide();
+            if (checkPwd() && checkEmail())
+            {
+                saveUser();
+            }
+            else
+            {
+                boxInfo.Text = "Passwords do not match";
+            }
+            /*
+             * Thread.Sleep(1900);
+             this.Hide();*/
+        }
+        private bool checkEmail()
+        {
+            textBoxEmail.Text = textBoxEmail.Text.Trim();
+            if (textBoxEmail.Text.Length < 4)
+                return false;
+
+            if(!textBoxEmail.Text.Contains("@"))
+                return false;
+
+            int positionAt = textBoxEmail.Text.IndexOf("@");
+            string beforeAt = textBoxEmail.Text.Substring(positionAt);
+
+            if (beforeAt.Length < 4 && (!beforeAt.Contains(".") || beforeAt.Contains("@")))
+                return false;
+
+            int positionDot = beforeAt.IndexOf(".");
+            string beforeDot = beforeAt.Substring(positionDot);
+
+            if (beforeDot.Contains(".") && beforeDot.Length < 2)
+                return false;
+
+            return true;
+        }
+
+        private bool checkPwd()
+        {
+            if (textBoxPwd.Text.Equals(textBoxRPassword.Text))
+                return true;
+            else
+                return false;
+        }
+
+        private void textBoxPwd_TextChanged(object sender, EventArgs e)
+        {
+            textBoxPwd.UseSystemPasswordChar = true;
+        }
+
+        private void textBoxRPassword_TextChanged(object sender, EventArgs e)
+        {
+            textBoxRPassword.UseSystemPasswordChar = true;
         }
     }
 }
