@@ -31,6 +31,8 @@ namespace Gym_Routines.forms
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewDieta));
             this.panelTitulo = new System.Windows.Forms.Panel();
+            this.pictureBoxHide = new System.Windows.Forms.PictureBox();
+            this.pictureBoxClose = new System.Windows.Forms.PictureBox();
             this.labelTitle = new System.Windows.Forms.Label();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
@@ -73,6 +75,8 @@ namespace Gym_Routines.forms
             this.textBox5Calories = new System.Windows.Forms.TextBox();
             this.textBoxInfo = new System.Windows.Forms.TextBox();
             this.panelTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHide)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.SuspendLayout();
@@ -80,6 +84,8 @@ namespace Gym_Routines.forms
             // panelTitulo
             // 
             this.panelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            this.panelTitulo.Controls.Add(this.pictureBoxHide);
+            this.panelTitulo.Controls.Add(this.pictureBoxClose);
             this.panelTitulo.Controls.Add(this.labelTitle);
             this.panelTitulo.Controls.Add(this.btnMinimizar);
             this.panelTitulo.Controls.Add(this.btnCerrar);
@@ -89,6 +95,33 @@ namespace Gym_Routines.forms
             this.panelTitulo.Name = "panelTitulo";
             this.panelTitulo.Size = new System.Drawing.Size(831, 56);
             this.panelTitulo.TabIndex = 2;
+            this.panelTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitulo_MouseDown);
+            this.panelTitulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTitulo_MouseMove);
+            this.panelTitulo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelTitulo_MouseUp);
+            // 
+            // pictureBoxHide
+            // 
+            this.pictureBoxHide.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxHide.Image")));
+            this.pictureBoxHide.Location = new System.Drawing.Point(780, 0);
+            this.pictureBoxHide.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBoxHide.Name = "pictureBoxHide";
+            this.pictureBoxHide.Size = new System.Drawing.Size(16, 56);
+            this.pictureBoxHide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxHide.TabIndex = 6;
+            this.pictureBoxHide.TabStop = false;
+            this.pictureBoxHide.Click += new System.EventHandler(this.pictureBoxHide_Click);
+            // 
+            // pictureBoxClose
+            // 
+            this.pictureBoxClose.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxClose.Image")));
+            this.pictureBoxClose.Location = new System.Drawing.Point(803, 0);
+            this.pictureBoxClose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBoxClose.Name = "pictureBoxClose";
+            this.pictureBoxClose.Size = new System.Drawing.Size(16, 56);
+            this.pictureBoxClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxClose.TabIndex = 5;
+            this.pictureBoxClose.TabStop = false;
+            this.pictureBoxClose.Click += new System.EventHandler(this.pictureBoxClose_Click);
             // 
             // labelTitle
             // 
@@ -129,10 +162,10 @@ namespace Gym_Routines.forms
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxType.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxType.Location = new System.Drawing.Point(299, 116);
+            this.textBoxType.Location = new System.Drawing.Point(82, 116);
             this.textBoxType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxType.Name = "textBoxType";
-            this.textBoxType.Size = new System.Drawing.Size(217, 32);
+            this.textBoxType.Size = new System.Drawing.Size(655, 32);
             this.textBoxType.TabIndex = 12;
             // 
             // labelType
@@ -143,7 +176,7 @@ namespace Gym_Routines.forms
             this.labelType.AutoSize = true;
             this.labelType.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelType.ForeColor = System.Drawing.Color.Silver;
-            this.labelType.Location = new System.Drawing.Point(377, 84);
+            this.labelType.Location = new System.Drawing.Point(82, 89);
             this.labelType.Name = "labelType";
             this.labelType.Size = new System.Drawing.Size(56, 23);
             this.labelType.TabIndex = 13;
@@ -601,10 +634,11 @@ namespace Gym_Routines.forms
             this.textBoxInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.textBoxInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxInfo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxInfo.ForeColor = System.Drawing.Color.White;
             this.textBoxInfo.Location = new System.Drawing.Point(82, 576);
             this.textBoxInfo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxInfo.Name = "textBoxInfo";
-            this.textBoxInfo.Size = new System.Drawing.Size(655, 32);
+            this.textBoxInfo.Size = new System.Drawing.Size(655, 25);
             this.textBoxInfo.TabIndex = 49;
             this.textBoxInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -658,6 +692,8 @@ namespace Gym_Routines.forms
             this.Text = "NewDieta";
             this.panelTitulo.ResumeLayout(false);
             this.panelTitulo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHide)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.ResumeLayout(false);
@@ -709,5 +745,7 @@ namespace Gym_Routines.forms
         private System.Windows.Forms.TextBox textBox5Proteins;
         private System.Windows.Forms.TextBox textBox5Calories;
         private System.Windows.Forms.TextBox textBoxInfo;
+        private System.Windows.Forms.PictureBox pictureBoxHide;
+        private System.Windows.Forms.PictureBox pictureBoxClose;
     }
 }

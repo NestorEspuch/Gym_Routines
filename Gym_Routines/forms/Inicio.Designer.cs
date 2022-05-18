@@ -208,6 +208,7 @@ namespace Gym_Routines
             this.btnNewDieta.Text = "Nueva";
             this.btnNewDieta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNewDieta.UseVisualStyleBackColor = true;
+            this.btnNewDieta.Click += new System.EventHandler(this.btnNewDieta_Click);
             // 
             // dietaTodas
             // 

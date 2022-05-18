@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
 using System.IO;
+using Gym_Routines.forms;
 
 namespace Gym_Routines
 {
@@ -208,6 +209,12 @@ namespace Gym_Routines
         {
             MostrarDietaHipertrofia(readDietas());
             ocultarSubmenu();
+        }
+
+        private void btnNewDieta_Click(object sender, EventArgs e)
+        {
+            NewDieta dieta = new NewDieta();
+            dieta.Show();
         }
     }
 }
