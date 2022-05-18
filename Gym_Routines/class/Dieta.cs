@@ -16,10 +16,10 @@ namespace Gym_Routines
         {
             this.comidas = comidas;
             this.tipo = tipo;
-            this.totalCalorias = totalCalorias;
-            this.totalProteinas = totalProteinas;
-            this.totalHidratos = totalHidratos;
-            this.totalGrasas = totalGrasas;
+            this.totalCalorias = CalcularTotalCalorias();
+            this.totalProteinas = CalcularTotalProteinas();
+            this.totalHidratos = CalcularTotalHidratos();
+            this.totalGrasas = CalcularTotalGrasas();
         }
         public Dieta() : this(new List<Comida>(),"",0,0,0,0) { }
         public void SetComidas(List<Comida> comidas)

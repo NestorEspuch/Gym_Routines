@@ -49,6 +49,8 @@ namespace Gym_Routines
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.listBoxContenido = new System.Windows.Forms.ListBox();
+            this.btnNewDieta = new System.Windows.Forms.Button();
+            this.btnNewRutina = new System.Windows.Forms.Button();
             this.menuLateral.SuspendLayout();
             this.submenuRutinas.SuspendLayout();
             this.submenuDietas.SuspendLayout();
@@ -81,7 +83,7 @@ namespace Gym_Routines
             this.planSeleccionado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.planSeleccionado.ForeColor = System.Drawing.Color.White;
             this.planSeleccionado.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.planSeleccionado.Location = new System.Drawing.Point(0, 485);
+            this.planSeleccionado.Location = new System.Drawing.Point(0, 560);
             this.planSeleccionado.Name = "planSeleccionado";
             this.planSeleccionado.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.planSeleccionado.Size = new System.Drawing.Size(200, 45);
@@ -93,13 +95,14 @@ namespace Gym_Routines
             // submenuRutinas
             // 
             this.submenuRutinas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.submenuRutinas.Controls.Add(this.btnNewRutina);
             this.submenuRutinas.Controls.Add(this.rutinaTodas);
             this.submenuRutinas.Controls.Add(this.rutinaHipertrofia);
             this.submenuRutinas.Controls.Add(this.rutinaDefinicion);
             this.submenuRutinas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.submenuRutinas.Location = new System.Drawing.Point(0, 360);
+            this.submenuRutinas.Location = new System.Drawing.Point(0, 399);
             this.submenuRutinas.Name = "submenuRutinas";
-            this.submenuRutinas.Size = new System.Drawing.Size(200, 125);
+            this.submenuRutinas.Size = new System.Drawing.Size(200, 161);
             this.submenuRutinas.TabIndex = 6;
             // 
             // rutinaTodas
@@ -153,7 +156,7 @@ namespace Gym_Routines
             this.rutinas.FlatAppearance.BorderSize = 0;
             this.rutinas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rutinas.ForeColor = System.Drawing.Color.White;
-            this.rutinas.Location = new System.Drawing.Point(0, 315);
+            this.rutinas.Location = new System.Drawing.Point(0, 354);
             this.rutinas.Name = "rutinas";
             this.rutinas.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.rutinas.Size = new System.Drawing.Size(200, 45);
@@ -166,13 +169,14 @@ namespace Gym_Routines
             // submenuDietas
             // 
             this.submenuDietas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.submenuDietas.Controls.Add(this.btnNewDieta);
             this.submenuDietas.Controls.Add(this.dietaTodas);
             this.submenuDietas.Controls.Add(this.dietaHipertrofia);
             this.submenuDietas.Controls.Add(this.dietaDefinicion);
             this.submenuDietas.Dock = System.Windows.Forms.DockStyle.Top;
             this.submenuDietas.Location = new System.Drawing.Point(0, 190);
             this.submenuDietas.Name = "submenuDietas";
-            this.submenuDietas.Size = new System.Drawing.Size(200, 125);
+            this.submenuDietas.Size = new System.Drawing.Size(200, 164);
             this.submenuDietas.TabIndex = 4;
             // 
             // dietaTodas
@@ -319,6 +323,36 @@ namespace Gym_Routines
             this.listBoxContenido.Size = new System.Drawing.Size(847, 506);
             this.listBoxContenido.TabIndex = 3;
             // 
+            // btnNewDieta
+            // 
+            this.btnNewDieta.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNewDieta.FlatAppearance.BorderSize = 0;
+            this.btnNewDieta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNewDieta.ForeColor = System.Drawing.Color.White;
+            this.btnNewDieta.Location = new System.Drawing.Point(0, 120);
+            this.btnNewDieta.Name = "btnNewDieta";
+            this.btnNewDieta.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnNewDieta.Size = new System.Drawing.Size(200, 40);
+            this.btnNewDieta.TabIndex = 3;
+            this.btnNewDieta.Text = "Nueva";
+            this.btnNewDieta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNewDieta.UseVisualStyleBackColor = true;
+            // 
+            // btnNewRutina
+            // 
+            this.btnNewRutina.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNewRutina.FlatAppearance.BorderSize = 0;
+            this.btnNewRutina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNewRutina.ForeColor = System.Drawing.Color.White;
+            this.btnNewRutina.Location = new System.Drawing.Point(0, 120);
+            this.btnNewRutina.Name = "btnNewRutina";
+            this.btnNewRutina.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnNewRutina.Size = new System.Drawing.Size(200, 40);
+            this.btnNewRutina.TabIndex = 3;
+            this.btnNewRutina.Text = "Nueva";
+            this.btnNewRutina.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNewRutina.UseVisualStyleBackColor = true;
+            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
@@ -371,6 +405,8 @@ namespace Gym_Routines
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.ListBox listBoxContenido;
+        private System.Windows.Forms.Button btnNewDieta;
+        private System.Windows.Forms.Button btnNewRutina;
     }
 }
 

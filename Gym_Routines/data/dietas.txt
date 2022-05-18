@@ -1,0 +1,6 @@
+Arroz,400,20,400,0,Pasta,300,50,500,2,Pollo,800,100,50,20,Espinacas,30,40,2,10,Chia,20,20,400,1,Definicion
+Arroz,400,20,400,0,Ternera,700,100,20,20,Pollo,800,100,50,20,Huevo,500,70,20,100,Jamón Serrano,120,60,70,30,Hipertrofia
+Lechuga,30,0,30,0,Caldo pollo,400,20,120,30,Pure calabaza,400,15,60,10,Clara huevo,200,65,5,0,Chia,20,20,400,1,Definicion
+Chia,20,20,400,1,Arroz,400,20,400,0,Acelgas,35,5,55,0,Ensalada,500,10,400,5,Atún,300,100,30,20,Definicion
+Potro,300,150,10,40,Patata,200,0,400,5,Arroz con pollo,500,100,200,10,Salmón,200,100,0,10,Espinacas con Atún,200,150,30,10,Hipertrofia
+Atún y cebolla,400,100,20,10,Arroz y potro,700,200,200,20,Pollo,800,100,50,20,Espinacas,30,40,2,10,Salmón con Chia,220,120,400,11,Hipertrofia
