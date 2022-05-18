@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Gym_Routines
 {
@@ -9,27 +10,27 @@ namespace Gym_Routines
     {
         public void MostrarDietaHipertrofia(List<Dieta> dietas)
         {
-            string result = "";
+            List<Dieta> lista = new List<Dieta>();
             foreach(Dieta d in dietas)
             {
                 if(d.GetTipo() == "Hipertrofia")
                 {
-                    result += d + "\n";
+                    lista.Add(d);
                 }
             }
-            Console.WriteLine(result);
+            listBoxContenido.DataSource = lista;
         }
         public void MostrarDietaDefinicion(List<Dieta> dietas)
         {
-            string result = "";
+            List<Dieta> lista = new List<Dieta>();
             foreach (Dieta d in dietas)
             {
-                if (d.GetTipo() == "Definición")
+                if (d.GetTipo() == "Definicion")
                 {
-                    result += d + "\n";
+                    lista.Add(d);
                 }
             }
-            Console.WriteLine(result);
+            listBoxContenido.DataSource = lista;
         }
         public void MostrarRutinaHipertrofia(List<Rutina> rutinas)
         {
@@ -112,11 +113,7 @@ namespace Gym_Routines
 
         private void dietaDefinicion_Click(object sender, EventArgs e)
         {
-            /*
-             * 
-             * 
-             * 
-             */
+            MostrarDietaDefinicion(readDietas());
             ocultarSubmenu();
         }
 
@@ -153,6 +150,64 @@ namespace Gym_Routines
         private void panelTitulo_MouseUp(object sender, MouseEventArgs e)
         {
             movLogin = false;
+        }
+        private void mostrarDietas()
+        {
+
+        }
+        private List<Dieta> readDietas()
+        {
+            try
+            {
+                List<Dieta> dietas = new List<Dieta>();
+
+                StreamReader file = new StreamReader("../../../data/dietas.txt");
+                string line = file.ReadLine();
+
+                while(line != null)
+                {
+                    string[] split = line.Split(',');
+                    dietas.Add(
+                        new Dieta(
+                                new List<Comida>()
+                                {
+                                    new Comida(split[0],double.Parse(split[1]),double.Parse(split[2]),
+                                    double.Parse(split[3]),double.Parse(split[4])), 
+                                    new Comida(split[5], double.Parse(split[6]),
+                                    double.Parse(split[7]), double.Parse(split[8]), double.Parse(split[9])),
+                                    new Comida(split[10], double.Parse(split[11]),
+                                    double.Parse(split[12]), double.Parse(split[13]), double.Parse(split[14])),
+                                    new Comida(split[15], double.Parse(split[16]),
+                                    double.Parse(split[17]), double.Parse(split[18]), double.Parse(split[19])),
+                                    new Comida(split[20], double.Parse(split[21]),
+                                    double.Parse(split[22]), double.Parse(split[23]), double.Parse(split[24]))
+                                },
+                                split[25]));
+                    line = file.ReadLine();
+                }
+                file.Close();
+                return dietas;
+            }
+            catch(IOException error)
+            {
+                return null;
+                Console.WriteLine("Error de lectura dietas.txt: "+error.Message);
+            }
+        }
+        private void mostrarDietas(List<Dieta> lista)
+        {
+            listBoxContenido.DataSource = lista;
+        }
+        private void dietaTodas_Click(object sender, EventArgs e)
+        {
+            mostrarDietas(readDietas());
+            ocultarSubmenu();
+        }
+
+        private void dietaHipertrofia_Click(object sender, EventArgs e)
+        {
+            MostrarDietaHipertrofia(readDietas());
+            ocultarSubmenu();
         }
     }
 }

@@ -62,7 +62,7 @@ namespace Gym_Routines
         }
         public override string ToString()
         {
-            return $"Nombre: {nombre}\n" +
+            return $"{nombre}\n" +
                 $" - calorias: {calorias}\n" +
                 $" - proteinas: {proteinas}\n" +
                 $" - hidratos: {hidratos}\n" +
