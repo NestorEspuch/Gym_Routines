@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
+using System.Threading;
+using System.Linq;
 
 namespace Gym_Routines.forms
 {
@@ -36,10 +38,6 @@ namespace Gym_Routines.forms
                 textBoxInfo.Text = "Error";
             }
         }
-        private void btnCreate_Click(object sender, EventArgs e)
-        {
-            writeDietas();
-        }
 
         private void pictureBoxClose_Click(object sender, EventArgs e)
         {
@@ -68,6 +66,92 @@ namespace Gym_Routines.forms
         private void panelTitulo_MouseUp(object sender, MouseEventArgs e)
         {
             movLogin = false;
+        }
+        private bool isNullBox()
+        {
+            foreach (var textBox in this.Controls.OfType<TextBox>())
+            {
+                if (String.IsNullOrEmpty(textBox.Text) && textBox != textBoxInfo)
+                {
+                    textBoxInfo.Text = "Fill in all fields";
+                    return false;
+                }
+            }
+            return true;
+            /*
+            if (String.IsNullOrEmpty(textBox1Calories.Text) || String.IsNullOrEmpty(textBox1Fats.Text) ||
+                String.IsNullOrEmpty(textBox1Food.Text) || String.IsNullOrEmpty(textBox1Hydrates.Text) ||
+                String.IsNullOrEmpty(textBox1Proteins.Text) || String.IsNullOrEmpty(textBox2Calories.Text) ||
+                String.IsNullOrEmpty(textBox2Fats.Text) || String.IsNullOrEmpty(textBox2Food.Text) ||
+                String.IsNullOrEmpty(textBox2Hydrates.Text) || String.IsNullOrEmpty(textBox2Proteins.Text) ||
+                String.IsNullOrEmpty(textBox3Calories.Text) || String.IsNullOrEmpty(textBox3Fats.Text) ||
+                String.IsNullOrEmpty(textBox3Food.Text) || String.IsNullOrEmpty(textBox3Hydrates.Text) ||
+                String.IsNullOrEmpty(textBox3Proteins.Text) || String.IsNullOrEmpty(textBox4Calories.Text) ||
+                String.IsNullOrEmpty(textBox4Fats.Text) || String.IsNullOrEmpty(textBox4Food.Text) ||
+                String.IsNullOrEmpty(textBox4Hydrates.Text) || String.IsNullOrEmpty(textBox4Proteins.Text) ||
+                String.IsNullOrEmpty(textBox5Calories.Text) || String.IsNullOrEmpty(textBox5Fats.Text) ||
+                String.IsNullOrEmpty(textBox5Food.Text) || String.IsNullOrEmpty(textBox5Hydrates.Text) ||
+                String.IsNullOrEmpty(textBox5Proteins.Text) || String.IsNullOrEmpty(textBoxType.Text))
+            {
+
+                textBoxInfo.Text = "Fill in all fields";
+                return false;
+            }
+            else
+                return true;
+            */
+        }
+        private bool isNumeric()
+        {
+            foreach (var textBox in this.Controls.OfType<TextBox>())
+            {
+                double num;
+                if (!double.TryParse(textBox.Text, out num) && textBox != textBoxInfo && 
+                    textBox != textBoxType && textBox != textBox1Food && textBox != textBox2Food &&
+                    textBox != textBox3Food && textBox != textBox4Food && textBox != textBox5Food)
+                {
+                    textBoxInfo.Text = "Food macros have to be numerical";
+                    return false;
+                }
+            }
+            return true;
+        }
+        private bool isWord()
+        {
+            foreach (var textBox in this.Controls.OfType<TextBox>())
+            {
+                double num;
+                if (double.TryParse(textBox.Text, out num) && textBox == textBoxInfo &&
+                    textBox == textBoxType && textBox == textBox1Food && textBox == textBox2Food &&
+                    textBox == textBox3Food && textBox == textBox4Food && textBox == textBox5Food)
+                {
+                    textBoxInfo.Text = "The name of the food must be words";
+                    return false;
+                }
+            }
+            return true;
+        }
+        private bool checks()
+        {
+            if (!isNullBox())
+                return false;
+
+            if (!isNumeric())
+                return false;
+
+            if (!isWord())
+                return false;
+
+            return true;
+        }
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            if(checks())
+                writeDietas();
+            /*
+            Thread.Sleep(1000);
+            this.Hide();
+            */
         }
     }
 }

@@ -40,15 +40,11 @@ namespace Gym_Routines.forms
             this.labelType = new System.Windows.Forms.Label();
             this.btnCreate = new System.Windows.Forms.Button();
             this.textBox2Food = new System.Windows.Forms.TextBox();
-            this.label2Food = new System.Windows.Forms.Label();
             this.textBox3Food = new System.Windows.Forms.TextBox();
-            this.label3Food = new System.Windows.Forms.Label();
             this.textBox4Food = new System.Windows.Forms.TextBox();
-            this.label4Food = new System.Windows.Forms.Label();
             this.textBox1Food = new System.Windows.Forms.TextBox();
             this.label1Food = new System.Windows.Forms.Label();
             this.textBox5Food = new System.Windows.Forms.TextBox();
-            this.label5Food = new System.Windows.Forms.Label();
             this.textBox1Calories = new System.Windows.Forms.TextBox();
             this.labelCalories = new System.Windows.Forms.Label();
             this.textBox1Proteins = new System.Windows.Forms.TextBox();
@@ -166,7 +162,7 @@ namespace Gym_Routines.forms
             this.textBoxType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxType.Name = "textBoxType";
             this.textBoxType.Size = new System.Drawing.Size(655, 32);
-            this.textBoxType.TabIndex = 12;
+            this.textBoxType.TabIndex = 1;
             // 
             // labelType
             // 
@@ -195,7 +191,7 @@ namespace Gym_Routines.forms
             this.btnCreate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(655, 48);
-            this.btnCreate.TabIndex = 14;
+            this.btnCreate.TabIndex = 27;
             this.btnCreate.Text = "Create";
             this.btnCreate.UseVisualStyleBackColor = false;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
@@ -210,21 +206,7 @@ namespace Gym_Routines.forms
             this.textBox2Food.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox2Food.Name = "textBox2Food";
             this.textBox2Food.Size = new System.Drawing.Size(158, 32);
-            this.textBox2Food.TabIndex = 15;
-            // 
-            // label2Food
-            // 
-            this.label2Food.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2Food.AutoSize = true;
-            this.label2Food.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2Food.ForeColor = System.Drawing.Color.Silver;
-            this.label2Food.Location = new System.Drawing.Point(82, 264);
-            this.label2Food.Name = "label2Food";
-            this.label2Food.Size = new System.Drawing.Size(90, 23);
-            this.label2Food.TabIndex = 16;
-            this.label2Food.Text = "2 - Food";
+            this.textBox2Food.TabIndex = 7;
             // 
             // textBox3Food
             // 
@@ -236,21 +218,7 @@ namespace Gym_Routines.forms
             this.textBox3Food.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox3Food.Name = "textBox3Food";
             this.textBox3Food.Size = new System.Drawing.Size(158, 32);
-            this.textBox3Food.TabIndex = 17;
-            // 
-            // label3Food
-            // 
-            this.label3Food.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3Food.AutoSize = true;
-            this.label3Food.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3Food.ForeColor = System.Drawing.Color.Silver;
-            this.label3Food.Location = new System.Drawing.Point(82, 344);
-            this.label3Food.Name = "label3Food";
-            this.label3Food.Size = new System.Drawing.Size(90, 23);
-            this.label3Food.TabIndex = 18;
-            this.label3Food.Text = "3 - Food";
+            this.textBox3Food.TabIndex = 12;
             // 
             // textBox4Food
             // 
@@ -262,21 +230,7 @@ namespace Gym_Routines.forms
             this.textBox4Food.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox4Food.Name = "textBox4Food";
             this.textBox4Food.Size = new System.Drawing.Size(158, 32);
-            this.textBox4Food.TabIndex = 19;
-            // 
-            // label4Food
-            // 
-            this.label4Food.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4Food.AutoSize = true;
-            this.label4Food.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4Food.ForeColor = System.Drawing.Color.Silver;
-            this.label4Food.Location = new System.Drawing.Point(82, 423);
-            this.label4Food.Name = "label4Food";
-            this.label4Food.Size = new System.Drawing.Size(90, 23);
-            this.label4Food.TabIndex = 20;
-            this.label4Food.Text = "4 - Food";
+            this.textBox4Food.TabIndex = 17;
             // 
             // textBox1Food
             // 
@@ -288,7 +242,7 @@ namespace Gym_Routines.forms
             this.textBox1Food.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1Food.Name = "textBox1Food";
             this.textBox1Food.Size = new System.Drawing.Size(158, 32);
-            this.textBox1Food.TabIndex = 21;
+            this.textBox1Food.TabIndex = 2;
             // 
             // label1Food
             // 
@@ -300,9 +254,9 @@ namespace Gym_Routines.forms
             this.label1Food.ForeColor = System.Drawing.Color.Silver;
             this.label1Food.Location = new System.Drawing.Point(82, 189);
             this.label1Food.Name = "label1Food";
-            this.label1Food.Size = new System.Drawing.Size(90, 23);
+            this.label1Food.Size = new System.Drawing.Size(123, 23);
             this.label1Food.TabIndex = 22;
-            this.label1Food.Text = "1 - Food";
+            this.label1Food.Text = "Name food";
             // 
             // textBox5Food
             // 
@@ -314,21 +268,7 @@ namespace Gym_Routines.forms
             this.textBox5Food.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox5Food.Name = "textBox5Food";
             this.textBox5Food.Size = new System.Drawing.Size(158, 32);
-            this.textBox5Food.TabIndex = 23;
-            // 
-            // label5Food
-            // 
-            this.label5Food.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5Food.AutoSize = true;
-            this.label5Food.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5Food.ForeColor = System.Drawing.Color.Silver;
-            this.label5Food.Location = new System.Drawing.Point(82, 498);
-            this.label5Food.Name = "label5Food";
-            this.label5Food.Size = new System.Drawing.Size(90, 23);
-            this.label5Food.TabIndex = 24;
-            this.label5Food.Text = "5 - Food";
+            this.textBox5Food.TabIndex = 22;
             // 
             // textBox1Calories
             // 
@@ -340,7 +280,7 @@ namespace Gym_Routines.forms
             this.textBox1Calories.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1Calories.Name = "textBox1Calories";
             this.textBox1Calories.Size = new System.Drawing.Size(90, 32);
-            this.textBox1Calories.TabIndex = 25;
+            this.textBox1Calories.TabIndex = 3;
             // 
             // labelCalories
             // 
@@ -366,7 +306,7 @@ namespace Gym_Routines.forms
             this.textBox1Proteins.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1Proteins.Name = "textBox1Proteins";
             this.textBox1Proteins.Size = new System.Drawing.Size(90, 32);
-            this.textBox1Proteins.TabIndex = 27;
+            this.textBox1Proteins.TabIndex = 4;
             // 
             // labelProteins
             // 
@@ -392,7 +332,7 @@ namespace Gym_Routines.forms
             this.textBox1Hydrates.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1Hydrates.Name = "textBox1Hydrates";
             this.textBox1Hydrates.Size = new System.Drawing.Size(90, 32);
-            this.textBox1Hydrates.TabIndex = 29;
+            this.textBox1Hydrates.TabIndex = 5;
             // 
             // labelHydrates
             // 
@@ -418,7 +358,7 @@ namespace Gym_Routines.forms
             this.textBox1Fats.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1Fats.Name = "textBox1Fats";
             this.textBox1Fats.Size = new System.Drawing.Size(90, 32);
-            this.textBox1Fats.TabIndex = 31;
+            this.textBox1Fats.TabIndex = 6;
             // 
             // labelFats
             // 
@@ -444,7 +384,7 @@ namespace Gym_Routines.forms
             this.textBox2Fats.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox2Fats.Name = "textBox2Fats";
             this.textBox2Fats.Size = new System.Drawing.Size(90, 32);
-            this.textBox2Fats.TabIndex = 36;
+            this.textBox2Fats.TabIndex = 11;
             // 
             // textBox2Hydrates
             // 
@@ -456,7 +396,7 @@ namespace Gym_Routines.forms
             this.textBox2Hydrates.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox2Hydrates.Name = "textBox2Hydrates";
             this.textBox2Hydrates.Size = new System.Drawing.Size(90, 32);
-            this.textBox2Hydrates.TabIndex = 35;
+            this.textBox2Hydrates.TabIndex = 10;
             // 
             // textBox2Proteins
             // 
@@ -464,11 +404,11 @@ namespace Gym_Routines.forms
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox2Proteins.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox2Proteins.Location = new System.Drawing.Point(417, 296);
+            this.textBox2Proteins.Location = new System.Drawing.Point(414, 296);
             this.textBox2Proteins.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox2Proteins.Name = "textBox2Proteins";
             this.textBox2Proteins.Size = new System.Drawing.Size(90, 32);
-            this.textBox2Proteins.TabIndex = 34;
+            this.textBox2Proteins.TabIndex = 9;
             // 
             // textBox2Calories
             // 
@@ -480,7 +420,7 @@ namespace Gym_Routines.forms
             this.textBox2Calories.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox2Calories.Name = "textBox2Calories";
             this.textBox2Calories.Size = new System.Drawing.Size(90, 32);
-            this.textBox2Calories.TabIndex = 33;
+            this.textBox2Calories.TabIndex = 8;
             // 
             // textBox3Fats
             // 
@@ -492,7 +432,7 @@ namespace Gym_Routines.forms
             this.textBox3Fats.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox3Fats.Name = "textBox3Fats";
             this.textBox3Fats.Size = new System.Drawing.Size(90, 32);
-            this.textBox3Fats.TabIndex = 40;
+            this.textBox3Fats.TabIndex = 16;
             // 
             // textBox3Hydrates
             // 
@@ -504,7 +444,7 @@ namespace Gym_Routines.forms
             this.textBox3Hydrates.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox3Hydrates.Name = "textBox3Hydrates";
             this.textBox3Hydrates.Size = new System.Drawing.Size(90, 32);
-            this.textBox3Hydrates.TabIndex = 39;
+            this.textBox3Hydrates.TabIndex = 15;
             // 
             // textBox3Proteins
             // 
@@ -516,7 +456,7 @@ namespace Gym_Routines.forms
             this.textBox3Proteins.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox3Proteins.Name = "textBox3Proteins";
             this.textBox3Proteins.Size = new System.Drawing.Size(90, 32);
-            this.textBox3Proteins.TabIndex = 38;
+            this.textBox3Proteins.TabIndex = 14;
             // 
             // textBox3Calories
             // 
@@ -528,7 +468,7 @@ namespace Gym_Routines.forms
             this.textBox3Calories.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox3Calories.Name = "textBox3Calories";
             this.textBox3Calories.Size = new System.Drawing.Size(90, 32);
-            this.textBox3Calories.TabIndex = 37;
+            this.textBox3Calories.TabIndex = 13;
             // 
             // textBox4Fats
             // 
@@ -540,7 +480,7 @@ namespace Gym_Routines.forms
             this.textBox4Fats.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox4Fats.Name = "textBox4Fats";
             this.textBox4Fats.Size = new System.Drawing.Size(90, 32);
-            this.textBox4Fats.TabIndex = 44;
+            this.textBox4Fats.TabIndex = 21;
             // 
             // textBox4Hydrates
             // 
@@ -552,7 +492,7 @@ namespace Gym_Routines.forms
             this.textBox4Hydrates.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox4Hydrates.Name = "textBox4Hydrates";
             this.textBox4Hydrates.Size = new System.Drawing.Size(90, 32);
-            this.textBox4Hydrates.TabIndex = 43;
+            this.textBox4Hydrates.TabIndex = 20;
             // 
             // textBox4Proteins
             // 
@@ -564,7 +504,7 @@ namespace Gym_Routines.forms
             this.textBox4Proteins.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox4Proteins.Name = "textBox4Proteins";
             this.textBox4Proteins.Size = new System.Drawing.Size(90, 32);
-            this.textBox4Proteins.TabIndex = 42;
+            this.textBox4Proteins.TabIndex = 19;
             // 
             // textBox4Calories
             // 
@@ -576,7 +516,7 @@ namespace Gym_Routines.forms
             this.textBox4Calories.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox4Calories.Name = "textBox4Calories";
             this.textBox4Calories.Size = new System.Drawing.Size(90, 32);
-            this.textBox4Calories.TabIndex = 41;
+            this.textBox4Calories.TabIndex = 18;
             // 
             // textBox5Fats
             // 
@@ -588,7 +528,7 @@ namespace Gym_Routines.forms
             this.textBox5Fats.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox5Fats.Name = "textBox5Fats";
             this.textBox5Fats.Size = new System.Drawing.Size(90, 32);
-            this.textBox5Fats.TabIndex = 48;
+            this.textBox5Fats.TabIndex = 26;
             // 
             // textBox5Hydrates
             // 
@@ -600,7 +540,7 @@ namespace Gym_Routines.forms
             this.textBox5Hydrates.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox5Hydrates.Name = "textBox5Hydrates";
             this.textBox5Hydrates.Size = new System.Drawing.Size(90, 32);
-            this.textBox5Hydrates.TabIndex = 47;
+            this.textBox5Hydrates.TabIndex = 25;
             // 
             // textBox5Proteins
             // 
@@ -612,7 +552,7 @@ namespace Gym_Routines.forms
             this.textBox5Proteins.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox5Proteins.Name = "textBox5Proteins";
             this.textBox5Proteins.Size = new System.Drawing.Size(90, 32);
-            this.textBox5Proteins.TabIndex = 46;
+            this.textBox5Proteins.TabIndex = 24;
             // 
             // textBox5Calories
             // 
@@ -624,7 +564,7 @@ namespace Gym_Routines.forms
             this.textBox5Calories.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox5Calories.Name = "textBox5Calories";
             this.textBox5Calories.Size = new System.Drawing.Size(90, 32);
-            this.textBox5Calories.TabIndex = 45;
+            this.textBox5Calories.TabIndex = 23;
             // 
             // textBoxInfo
             // 
@@ -634,7 +574,7 @@ namespace Gym_Routines.forms
             this.textBoxInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.textBoxInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxInfo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxInfo.ForeColor = System.Drawing.Color.White;
+            this.textBoxInfo.ForeColor = System.Drawing.Color.Red;
             this.textBoxInfo.Location = new System.Drawing.Point(82, 576);
             this.textBoxInfo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxInfo.Name = "textBoxInfo";
@@ -674,15 +614,11 @@ namespace Gym_Routines.forms
             this.Controls.Add(this.textBox1Calories);
             this.Controls.Add(this.labelCalories);
             this.Controls.Add(this.textBox5Food);
-            this.Controls.Add(this.label5Food);
             this.Controls.Add(this.textBox1Food);
             this.Controls.Add(this.label1Food);
             this.Controls.Add(this.textBox4Food);
-            this.Controls.Add(this.label4Food);
             this.Controls.Add(this.textBox3Food);
-            this.Controls.Add(this.label3Food);
             this.Controls.Add(this.textBox2Food);
-            this.Controls.Add(this.label2Food);
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.textBoxType);
             this.Controls.Add(this.labelType);
@@ -711,15 +647,11 @@ namespace Gym_Routines.forms
         private System.Windows.Forms.Label labelType;
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.TextBox textBox2Food;
-        private System.Windows.Forms.Label label2Food;
         private System.Windows.Forms.TextBox textBox3Food;
-        private System.Windows.Forms.Label label3Food;
         private System.Windows.Forms.TextBox textBox4Food;
-        private System.Windows.Forms.Label label4Food;
         private System.Windows.Forms.TextBox textBox1Food;
         private System.Windows.Forms.Label label1Food;
         private System.Windows.Forms.TextBox textBox5Food;
-        private System.Windows.Forms.Label label5Food;
         private System.Windows.Forms.TextBox textBox1Calories;
         private System.Windows.Forms.Label labelCalories;
         private System.Windows.Forms.TextBox textBox1Proteins;

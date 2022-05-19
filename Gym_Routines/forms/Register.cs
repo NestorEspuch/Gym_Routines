@@ -66,21 +66,42 @@ namespace Gym_Routines
             }
         }
 
-        private void btnRegister_Click(object sender, EventArgs e)
+        private bool checks()
         {
-            if (checkPwd() && checkEmail())
+            bool correct = true;
+
+            if(!isNullBox())
             {
-                saveUser();
+                boxInfo.Text = "Fill in all fields";
+                correct = false;
             }
-            else
+
+            if (!isSamePwd())
             {
-                boxInfo.Text = "Passwords do not match";
+               boxInfo.Text = "Passwords do not match";
+               correct = false;
             }
-            /*
-             * Thread.Sleep(1900);
-             this.Hide();*/
+
+            if(!isCorrectEmail())
+            {
+                boxInfo.Text = "The email address is incorrect";
+                correct = false;
+            }
+
+            return correct;
         }
-        private bool checkEmail()
+
+        private bool isNullBox()
+        {
+            if (String.IsNullOrEmpty(textBoxName.Text) || String.IsNullOrEmpty(textBoxUser.Text) ||
+                String.IsNullOrEmpty(textBoxPwd.Text) || String.IsNullOrEmpty(textBoxRPassword.Text) ||
+                String.IsNullOrEmpty(textBoxEmail.Text))
+                return false;
+            else
+                return true;
+        }
+
+        private bool isCorrectEmail()
         {
             textBoxEmail.Text = textBoxEmail.Text.Trim();
             if (textBoxEmail.Text.Length < 4)
@@ -104,7 +125,7 @@ namespace Gym_Routines
             return true;
         }
 
-        private bool checkPwd()
+        private bool isSamePwd()
         {
             if (textBoxPwd.Text.Equals(textBoxRPassword.Text))
                 return true;
@@ -120,6 +141,15 @@ namespace Gym_Routines
         private void textBoxRPassword_TextChanged(object sender, EventArgs e)
         {
             textBoxRPassword.UseSystemPasswordChar = true;
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            if (checks())
+                saveUser();
+            /*
+             * Thread.Sleep(1900);
+             this.Hide();*/
         }
     }
 }
