@@ -41,7 +41,7 @@ namespace Gym_Routines.forms
 
         private void pictureBoxClose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void pictureBoxHide_Click(object sender, EventArgs e)

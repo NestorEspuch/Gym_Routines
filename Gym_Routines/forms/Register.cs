@@ -20,7 +20,7 @@ namespace Gym_Routines
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
 
         private void btnMinimizar_Click(object sender, EventArgs e)

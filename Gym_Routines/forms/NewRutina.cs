@@ -22,7 +22,7 @@ namespace Gym_Routines.forms
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         bool movLogin = false;
