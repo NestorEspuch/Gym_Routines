@@ -10,14 +10,48 @@ namespace Gym_Routines
         string dificultad;
         string tipo;
         int diasEntrenamiento;
-        public Rutina(List<Ejercicio> ejercicios, string dificultad, string tipo, int diasEntrenamiento)
+        public Rutina(List<Ejercicio> ejercicios, string tipo, int diasEntrenamiento)
         {
             this.ejercicios = ejercicios;
-            this.dificultad = dificultad;
+            this.dificultad = calcularDificultad();
             this.tipo = tipo;
             this.diasEntrenamiento = diasEntrenamiento;
         }
-        public Rutina() : this(new List<Ejercicio>(),"","",0) { }
+        public Rutina() : this(new List<Ejercicio>(),"",0) { }
+        private string calcularDificultad()
+        {
+            int baja = 0, media = 0, alta = 0;
+            foreach(Ejercicio e in ejercicios)
+            {
+                switch(e.GetDificultad().ToLower())
+                {
+                    case "baja":
+                        baja++;
+                        break;
+                    case "media":
+                        media++;
+                        break;
+                    case "alta":
+                        alta++;
+                        break;
+                }
+            }
+            if(baja > media && baja > alta)
+            {
+                return "baja";
+            }
+            else
+            {
+                if(media > alta)
+                {
+                    return "media";
+                }
+                else
+                {
+                    return "alta";
+                }
+            }
+        }
         public void SetEjercicios(List<Ejercicio> ejercicios)
         {
             this.ejercicios = ejercicios;
@@ -57,10 +91,10 @@ namespace Gym_Routines
         public override string ToString()
         {
             string result = "";
-            result += "Ejercicios: \n";
+            result += "";
             foreach(Ejercicio e in ejercicios)
             {
-                result +="- "+ e + "\n";
+                result += e + "\n";
             }
             result += $"Dificultad: {dificultad}, Tipo: {tipo}\n" +
                 $"Dias de entrenamiento: {diasEntrenamiento}";

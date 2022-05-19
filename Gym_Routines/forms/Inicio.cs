@@ -9,7 +9,7 @@ namespace Gym_Routines
 {
     public partial class Inicio : Form
     {
-        public void MostrarDietaHipertrofia(List<Dieta> dietas)
+        public void mostrarDietaHipertrofia(List<Dieta> dietas)
         {
             List<Dieta> lista = new List<Dieta>();
             foreach(Dieta d in dietas)
@@ -21,7 +21,7 @@ namespace Gym_Routines
             }
             listBoxContenido.DataSource = lista;
         }
-        public void MostrarDietaDefinicion(List<Dieta> dietas)
+        public void mostrarDietaDefinicion(List<Dieta> dietas)
         {
             List<Dieta> lista = new List<Dieta>();
             foreach (Dieta d in dietas)
@@ -33,29 +33,29 @@ namespace Gym_Routines
             }
             listBoxContenido.DataSource = lista;
         }
-        public void MostrarRutinaHipertrofia(List<Rutina> rutinas)
+        public void mostrarRutinaHipertrofia(List<Rutina> rutinas)
         {
-            string result = "";
+            List<Rutina> lista = new List<Rutina>();
             foreach (Rutina r in rutinas)
             {
                 if (r.GetTipo() == "Hipertrofia")
                 {
-                    result += r + "\n";
+                    lista.Add(r);
                 }
             }
-            Console.WriteLine(result);
+            listBoxContenido.DataSource = lista;
         }
-        public void MostrarRutinaDefinicion(List<Rutina> rutinas)
+        public void mostrarRutinaDefinicion(List<Rutina> rutinas)
         {
-            string result = "";
+            List<Rutina> lista = new List<Rutina>();
             foreach (Rutina r in rutinas)
             {
-                if (r.GetTipo() == "Definición")
+                if (r.GetTipo() == "Definicion")
                 {
-                    result += r + "\n";
+                    lista.Add(r);
                 }
             }
-            Console.WriteLine(result);
+            listBoxContenido.DataSource = lista;
         }
         public Inicio()
         {
@@ -114,7 +114,7 @@ namespace Gym_Routines
 
         private void dietaDefinicion_Click(object sender, EventArgs e)
         {
-            MostrarDietaDefinicion(readDietas());
+            mostrarDietaDefinicion(readDietas());
             ocultarSubmenu();
         }
 
@@ -151,10 +151,6 @@ namespace Gym_Routines
         private void panelTitulo_MouseUp(object sender, MouseEventArgs e)
         {
             movLogin = false;
-        }
-        private void mostrarDietas()
-        {
-
         }
         private List<Dieta> readDietas()
         {
@@ -199,6 +195,11 @@ namespace Gym_Routines
         {
             listBoxContenido.DataSource = lista;
         }
+        private void mostrarRutinas(List<Rutina> lista)
+        {
+            listBoxContenido.DataSource = lista;
+        }
+
         private void dietaTodas_Click(object sender, EventArgs e)
         {
             mostrarDietas(readDietas());
@@ -207,7 +208,7 @@ namespace Gym_Routines
 
         private void dietaHipertrofia_Click(object sender, EventArgs e)
         {
-            MostrarDietaHipertrofia(readDietas());
+            mostrarDietaHipertrofia(readDietas());
             ocultarSubmenu();
         }
 
@@ -215,6 +216,65 @@ namespace Gym_Routines
         {
             NewDieta dieta = new NewDieta();
             dieta.Show();
+        }
+
+        private List<Rutina> readRutinas()
+        {
+            try
+            {
+                List<Rutina> lista = new List<Rutina>();
+
+                StreamReader file = new StreamReader("../../../data/rutinas.txt");
+                string line = file.ReadLine();
+
+                while (line != null)
+                {
+                    string[] split = line.Split(',');
+                    lista.Add(
+                        new Rutina(
+                                new List<Ejercicio>()
+                                {
+                                    new Ejercicio(split[0],split[1],split[2]),
+                                    new Ejercicio(split[3],split[4],split[5]),
+                                    new Ejercicio(split[6],split[7],split[8]),
+                                    new Ejercicio(split[9],split[10],split[11]),
+                                    new Ejercicio(split[12],split[13],split[14])
+                                },
+                                split[15],int.Parse(split[16])));
+                    line = file.ReadLine();
+                }
+                file.Close();
+                return lista;
+            }
+            catch(IOException error)
+            {
+                return null;
+                Console.WriteLine("Error de lectura archivo rutinas.txt: "+error.Message);
+            }
+        }
+
+        private void rutinaTodas_Click(object sender, EventArgs e)
+        {
+            mostrarRutinas(readRutinas());
+            ocultarSubmenu();
+        }
+
+        private void rutinaDefinicion_Click(object sender, EventArgs e)
+        {
+            mostrarRutinaDefinicion(readRutinas());
+            ocultarSubmenu();
+        }
+
+        private void rutinaHipertrofia_Click(object sender, EventArgs e)
+        {
+            mostrarRutinaHipertrofia(readRutinas());
+            ocultarSubmenu();
+        }
+
+        private void btnNewRutina_Click(object sender, EventArgs e)
+        {
+            NewRutina rutina = new NewRutina();
+            rutina.Show();
         }
     }
 }

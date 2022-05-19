@@ -119,6 +119,7 @@ namespace Gym_Routines
             this.btnNewRutina.Text = "Nueva";
             this.btnNewRutina.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNewRutina.UseVisualStyleBackColor = true;
+            this.btnNewRutina.Click += new System.EventHandler(this.btnNewRutina_Click);
             // 
             // rutinaTodas
             // 
@@ -134,6 +135,7 @@ namespace Gym_Routines
             this.rutinaTodas.Text = "Todas";
             this.rutinaTodas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.rutinaTodas.UseVisualStyleBackColor = true;
+            this.rutinaTodas.Click += new System.EventHandler(this.rutinaTodas_Click);
             // 
             // rutinaHipertrofia
             // 
@@ -149,6 +151,7 @@ namespace Gym_Routines
             this.rutinaHipertrofia.Text = "Hipertrofia";
             this.rutinaHipertrofia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.rutinaHipertrofia.UseVisualStyleBackColor = true;
+            this.rutinaHipertrofia.Click += new System.EventHandler(this.rutinaHipertrofia_Click);
             // 
             // rutinaDefinicion
             // 
@@ -164,6 +167,7 @@ namespace Gym_Routines
             this.rutinaDefinicion.Text = "Definición";
             this.rutinaDefinicion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.rutinaDefinicion.UseVisualStyleBackColor = true;
+            this.rutinaDefinicion.Click += new System.EventHandler(this.rutinaDefinicion_Click);
             // 
             // rutinas
             // 

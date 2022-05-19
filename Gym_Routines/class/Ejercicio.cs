@@ -42,8 +42,7 @@ namespace Gym_Routines
         }
         public override string ToString()
         {
-            return $"Nombre: {nombre}" +
-                $"Dificultad: {dificultad}, Musculo: {musculo}";
+            return $" Dificultad: {dificultad}, Musculo: {musculo}";
         }
         public int CompareTo(Ejercicio ejercicio)
         {

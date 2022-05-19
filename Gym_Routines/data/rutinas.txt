@@ -1,0 +1,6 @@
+Press Militar,Alta,Hombro,Press Banca,Media,Pecho,Curl Biceps,Alta,Biceps,Prensa,Alta,Cuadriceps,Haka,Alta,Cuadriceps,Hipertrofia,4
+Cinta de correr,Alta,Cardio,Remo,Alta,Cardio,Prensa,Baja,Pecho,Polea agarre V,Media,Triceps,Polea agarre plano,Media,Triceps,Definicion,5
+Cinta de correr,Baja,Cardio,Polea agarre V,Alta,Triceps,Polea agarre plano,Alta,Triceps,Polea agarre plano,Alta,Biceps,Polea agarre cuerda,Alta,Triceps y Biceps,Hipertrofia,5
+Prensa,Alta,Cuadriceps,Extension de cuadriceps,Alta,Cuadriceps,HipTrust,Alto,Gluteo,Sentadilla,Alto,Gluteo y Cuadriceps,Peso Muerto,Alta,Femoral,Hipertrofia,4
+Bicicleta eliptica,Alto,Cardio,Abdominales,Alto,Abdominales,Plancha,Alto,Abdominales,Sentadilla,Bajo,Gluteo,Prensa,Medio,Cuadriceps,Definicion,5
+Bicicleta estatica,Alto,Cardio,Elevacion laterales,Medio,Hombro,Press Militar,Medio,Hombro,Plancha,Alta,Abdominales,Abdominales,Alta,Abdominales,Definicion,5
