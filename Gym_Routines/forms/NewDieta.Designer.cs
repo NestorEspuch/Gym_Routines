@@ -190,7 +190,7 @@ namespace Gym_Routines.forms
             this.btnCreate.Location = new System.Drawing.Point(82, 616);
             this.btnCreate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(655, 48);
+            this.btnCreate.Size = new System.Drawing.Size(655, 56);
             this.btnCreate.TabIndex = 27;
             this.btnCreate.Text = "Create";
             this.btnCreate.UseVisualStyleBackColor = false;
@@ -404,7 +404,7 @@ namespace Gym_Routines.forms
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox2Proteins.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox2Proteins.Location = new System.Drawing.Point(414, 296);
+            this.textBox2Proteins.Location = new System.Drawing.Point(416, 296);
             this.textBox2Proteins.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox2Proteins.Name = "textBox2Proteins";
             this.textBox2Proteins.Size = new System.Drawing.Size(90, 32);
@@ -587,7 +587,7 @@ namespace Gym_Routines.forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.ClientSize = new System.Drawing.Size(831, 689);
+            this.ClientSize = new System.Drawing.Size(831, 723);
             this.Controls.Add(this.textBoxInfo);
             this.Controls.Add(this.textBox5Fats);
             this.Controls.Add(this.textBox5Hydrates);
@@ -624,6 +624,7 @@ namespace Gym_Routines.forms
             this.Controls.Add(this.labelType);
             this.Controls.Add(this.panelTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NewDieta";
             this.Text = "NewDieta";
             this.panelTitulo.ResumeLayout(false);

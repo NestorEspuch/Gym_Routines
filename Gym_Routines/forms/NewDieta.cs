@@ -67,7 +67,7 @@ namespace Gym_Routines.forms
         {
             movLogin = false;
         }
-        private bool isNullBox()
+        private bool isFill()
         {
             foreach (var textBox in this.Controls.OfType<TextBox>())
             {
@@ -121,7 +121,7 @@ namespace Gym_Routines.forms
             foreach (var textBox in this.Controls.OfType<TextBox>())
             {
                 double num;
-                if (double.TryParse(textBox.Text, out num) && textBox == textBoxInfo &&
+                if (double.TryParse(textBox.Text, out num) &&
                     textBox == textBoxType && textBox == textBox1Food && textBox == textBox2Food &&
                     textBox == textBox3Food && textBox == textBox4Food && textBox == textBox5Food)
                 {
@@ -133,7 +133,7 @@ namespace Gym_Routines.forms
         }
         private bool checks()
         {
-            if (!isNullBox())
+            if (!isFill())
                 return false;
 
             if (!isNumeric())
