@@ -18,6 +18,7 @@ namespace Gym_Routines
             {
                 fillUser();
             }
+            boxInfo.TabStop = false;
         }
         private void fillUser()
         {

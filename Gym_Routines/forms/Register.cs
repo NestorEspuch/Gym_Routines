@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using System.IO;
 using Newtonsoft.Json;
 using System.Threading;
+using System.Linq;
 
 namespace Gym_Routines
 {
@@ -16,6 +17,7 @@ namespace Gym_Routines
         public Register()
         {
             InitializeComponent();
+            boxInfo.TabStop = false;
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -68,27 +70,31 @@ namespace Gym_Routines
 
         private bool checks()
         {
-            bool correct = true;
-
             if(!isNullBox())
             {
                 boxInfo.Text = "Fill in all fields";
-                correct = false;
+                return false;
             }
 
             if (!isSamePwd())
             {
                boxInfo.Text = "Passwords do not match";
-               correct = false;
+               return false;
             }
 
             if(!isCorrectEmail())
             {
                 boxInfo.Text = "The email address is incorrect";
-                correct = false;
+                return false;
             }
 
-            return correct;
+            if (!isCharCorrect())
+            {
+                boxInfo.Text = "Unwanted characters";
+                return false;
+            }
+
+            return true;
         }
 
         private bool isNullBox()
@@ -111,9 +117,13 @@ namespace Gym_Routines
                 return false;
 
             int positionAt = textBoxEmail.Text.IndexOf("@");
+
+            if (positionAt != textBoxEmail.Text.LastIndexOf("@"))
+                return false;
+
             string beforeAt = textBoxEmail.Text.Substring(positionAt);
 
-            if (beforeAt.Length < 4 && (!beforeAt.Contains(".") || beforeAt.Contains("@")))
+            if (beforeAt.Length < 4 && !beforeAt.Contains("."))
                 return false;
 
             int positionDot = beforeAt.IndexOf(".");
@@ -131,6 +141,21 @@ namespace Gym_Routines
                 return true;
             else
                 return false;
+        }
+
+        private bool isCharCorrect()
+        {
+            string pattern = "^[A-Za-z0-9]+$";
+            System.Text.RegularExpressions.Regex regex = new System.Text.RegularExpressions.Regex(pattern);
+
+            foreach (var textBox in this.Controls.OfType<TextBox>())
+            {
+                if (!regex.IsMatch(textBox.Text) && textBox != boxInfo && textBox != textBoxEmail)
+                {
+                    return false;
+                }
+            }
+            return true;
         }
 
         private void textBoxPwd_TextChanged(object sender, EventArgs e)

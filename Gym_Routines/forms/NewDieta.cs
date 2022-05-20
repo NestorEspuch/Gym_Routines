@@ -16,6 +16,7 @@ namespace Gym_Routines.forms
         public NewDieta()
         {
             InitializeComponent();
+            textBoxInfo.TabStop = false;
         }
         private void writeDietas()
         {

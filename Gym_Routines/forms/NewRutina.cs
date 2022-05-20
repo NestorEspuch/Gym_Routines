@@ -15,6 +15,7 @@ namespace Gym_Routines.forms
         public NewRutina()
         {
             InitializeComponent();
+            textBoxInfo.TabStop = false;
         }
 
         private void btnMinimizar_Click(object sender, EventArgs e)

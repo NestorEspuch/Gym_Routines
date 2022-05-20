@@ -201,7 +201,7 @@ namespace Gym_Routines
             this.textBoxEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(357, 32);
-            this.textBoxEmail.TabIndex = 11;
+            this.textBoxEmail.TabIndex = 12;
             // 
             // labelEmail
             // 
@@ -230,7 +230,7 @@ namespace Gym_Routines
             this.btnRegister.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(358, 60);
-            this.btnRegister.TabIndex = 12;
+            this.btnRegister.TabIndex = 13;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = false;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
@@ -264,7 +264,7 @@ namespace Gym_Routines
             this.textBoxRPassword.Name = "textBoxRPassword";
             this.textBoxRPassword.PasswordChar = '*';
             this.textBoxRPassword.Size = new System.Drawing.Size(357, 32);
-            this.textBoxRPassword.TabIndex = 18;
+            this.textBoxRPassword.TabIndex = 11;
             this.textBoxRPassword.TextChanged += new System.EventHandler(this.textBoxRPassword_TextChanged);
             // 
             // labelRPwd
