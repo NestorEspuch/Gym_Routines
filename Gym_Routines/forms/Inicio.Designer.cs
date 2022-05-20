@@ -91,6 +91,7 @@ namespace Gym_Routines
             this.planSeleccionado.Text = "Plan seleccionado";
             this.planSeleccionado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.planSeleccionado.UseVisualStyleBackColor = true;
+            this.planSeleccionado.Click += new System.EventHandler(this.planSeleccionado_Click);
             // 
             // submenuRutinas
             // 

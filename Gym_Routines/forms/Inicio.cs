@@ -4,6 +4,7 @@ using System.Data;
 using System.Windows.Forms;
 using System.IO;
 using Gym_Routines.forms;
+using System.Linq;
 
 namespace Gym_Routines
 {
@@ -185,10 +186,9 @@ namespace Gym_Routines
                 file.Close();
                 return dietas;
             }
-            catch(IOException error)
+            catch(IOException)
             {
                 return null;
-                Console.WriteLine("Error de lectura dietas.txt: "+error.Message);
             }
         }
         private void mostrarDietas(List<Dieta> lista)
@@ -246,10 +246,9 @@ namespace Gym_Routines
                 file.Close();
                 return lista;
             }
-            catch(IOException error)
+            catch(IOException)
             {
                 return null;
-                Console.WriteLine("Error de lectura archivo rutinas.txt: "+error.Message);
             }
         }
 
@@ -275,6 +274,82 @@ namespace Gym_Routines
         {
             NewRutina rutina = new NewRutina();
             rutina.Show();
+        }
+
+        private List<Dieta> readDietaPlanSeleccionado()
+        {
+            List<Dieta> list = new List<Dieta>();
+            try
+            {
+                StreamReader file = new StreamReader("../../../data/planSeleccionado.txt");
+                string line = file.ReadLine();
+                string[] split = line.Split(',');
+
+                list.Add(new Dieta(
+                                new List<Comida>()
+                                {
+                                    new Comida(split[0],double.Parse(split[1]),double.Parse(split[2]),
+                                    double.Parse(split[3]),double.Parse(split[4])),
+                                    new Comida(split[5], double.Parse(split[6]),
+                                    double.Parse(split[7]), double.Parse(split[8]), double.Parse(split[9])),
+                                    new Comida(split[10], double.Parse(split[11]),
+                                    double.Parse(split[12]), double.Parse(split[13]), double.Parse(split[14])),
+                                    new Comida(split[15], double.Parse(split[16]),
+                                    double.Parse(split[17]), double.Parse(split[18]), double.Parse(split[19])),
+                                    new Comida(split[20], double.Parse(split[21]),
+                                    double.Parse(split[22]), double.Parse(split[23]), double.Parse(split[24]))
+                                },
+                                split[25]));
+                return list;
+            }
+            catch(IOException error)
+            {
+                listBoxContenido.Text = "Error de lectura fichero planSeleccionado.txt: "+error.Message;
+                return null;
+            }
+        }
+
+        private List<Rutina> readRutinaPlanSeleccionado()
+        {
+            List<Rutina> list = new List<Rutina>();
+            try
+            {
+                StreamReader file = new StreamReader("../../../data/planSeleccionado.txt");
+                string line = file.ReadLine();
+                line = file.ReadLine();
+                string[] split = line.Split(',');
+
+                list.Add(new Rutina(
+                                new List<Ejercicio>()
+                                {
+                                    new Ejercicio(split[0],split[1],split[2]),
+                                    new Ejercicio(split[3],split[4],split[5]),
+                                    new Ejercicio(split[6],split[7],split[8]),
+                                    new Ejercicio(split[9],split[10],split[11]),
+                                    new Ejercicio(split[12],split[13],split[14])
+                                },
+                                split[15], int.Parse(split[16])));
+                return list;
+            }
+            catch (IOException error)
+            {
+                listBoxContenido.Text = "Error de lectura fichero planSeleccionado.txt: " + error.Message;
+                return null;
+            }
+        }
+
+        private void mostrarPlanSeleccionado(List<Dieta> dieta,List<Rutina> rutina)
+        {
+            List<string> lista = new List<string>();
+                lista.Add(dieta[0].ToString());
+                lista.Add(rutina[0].ToString());
+
+            listBoxContenido.DataSource = lista;
+        }
+
+        private void planSeleccionado_Click(object sender, EventArgs e)
+        {
+            mostrarPlanSeleccionado(readDietaPlanSeleccionado(),readRutinaPlanSeleccionado());
         }
     }
 }

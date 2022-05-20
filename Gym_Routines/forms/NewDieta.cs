@@ -93,7 +93,6 @@ namespace Gym_Routines.forms
                 String.IsNullOrEmpty(textBox5Food.Text) || String.IsNullOrEmpty(textBox5Hydrates.Text) ||
                 String.IsNullOrEmpty(textBox5Proteins.Text) || String.IsNullOrEmpty(textBoxType.Text))
             {
-
                 textBoxInfo.Text = "Fill in all fields";
                 return false;
             }

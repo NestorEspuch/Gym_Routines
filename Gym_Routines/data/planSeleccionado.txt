@@ -1,0 +1,2 @@
+Lechuga,30,0,30,0,Caldo pollo,400,20,120,30,Pure calabaza,400,15,60,10,Clara huevo,200,65,5,0,Chia,20,20,400,1,Definicion
+Press Militar,Alta,Hombro,Press Banca,Media,Pecho,Curl Biceps,Alta,Biceps,Prensa,Alta,Cuadriceps,Haka,Alta,Cuadriceps,Hipertrofia,4
