@@ -73,8 +73,9 @@ namespace Gym_Routines
             this.menuLateral.Controls.Add(this.logo);
             this.menuLateral.Location = new System.Drawing.Point(0, 34);
             this.menuLateral.Name = "menuLateral";
-            this.menuLateral.Size = new System.Drawing.Size(200, 845);
+            this.menuLateral.Size = new System.Drawing.Size(200, 1209);
             this.menuLateral.TabIndex = 1;
+            this.menuLateral.Paint += new System.Windows.Forms.PaintEventHandler(this.menuLateral_Paint);
             // 
             // planSeleccionado
             // 
@@ -307,7 +308,7 @@ namespace Gym_Routines
             this.panelTitulo.Controls.Add(this.btnCerrar);
             this.panelTitulo.Location = new System.Drawing.Point(0, 0);
             this.panelTitulo.Name = "panelTitulo";
-            this.panelTitulo.Size = new System.Drawing.Size(1143, 42);
+            this.panelTitulo.Size = new System.Drawing.Size(1943, 42);
             this.panelTitulo.TabIndex = 2;
             this.panelTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitulo_MouseDown);
             this.panelTitulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTitulo_MouseMove);
@@ -327,7 +328,7 @@ namespace Gym_Routines
             // btnMinimizar
             // 
             this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
-            this.btnMinimizar.Location = new System.Drawing.Point(1097, 0);
+            this.btnMinimizar.Location = new System.Drawing.Point(1866, 0);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(14, 42);
             this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -338,7 +339,7 @@ namespace Gym_Routines
             // btnCerrar
             // 
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.Location = new System.Drawing.Point(1117, 0);
+            this.btnCerrar.Location = new System.Drawing.Point(1886, 0);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(14, 42);
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -355,9 +356,9 @@ namespace Gym_Routines
             this.listBoxContenido.ForeColor = System.Drawing.Color.White;
             this.listBoxContenido.FormattingEnabled = true;
             this.listBoxContenido.ItemHeight = 21;
-            this.listBoxContenido.Location = new System.Drawing.Point(246, 85);
+            this.listBoxContenido.Location = new System.Drawing.Point(206, 48);
             this.listBoxContenido.Name = "listBoxContenido";
-            this.listBoxContenido.Size = new System.Drawing.Size(847, 506);
+            this.listBoxContenido.Size = new System.Drawing.Size(1706, 1010);
             this.listBoxContenido.TabIndex = 3;
             // 
             // Inicio
@@ -365,7 +366,7 @@ namespace Gym_Routines
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.ClientSize = new System.Drawing.Size(1143, 641);
+            this.ClientSize = new System.Drawing.Size(1924, 894);
             this.Controls.Add(this.listBoxContenido);
             this.Controls.Add(this.panelTitulo);
             this.Controls.Add(this.menuLateral);
@@ -376,6 +377,7 @@ namespace Gym_Routines
             this.MinimizeBox = false;
             this.Name = "Inicio";
             this.Text = "GYM ROUTINES";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.menuPrincipal_Load);
             this.menuLateral.ResumeLayout(false);
             this.submenuRutinas.ResumeLayout(false);
@@ -409,11 +411,11 @@ namespace Gym_Routines
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnCerrar;
-        private System.Windows.Forms.ListBox listBoxContenido;
         private System.Windows.Forms.Button btnNewDieta;
         private System.Windows.Forms.Button btnNewRutina;
         private System.Windows.Forms.PictureBox imgLogo;
         private System.Windows.Forms.Button planSeleccionado;
+        private System.Windows.Forms.ListBox listBoxContenido;
     }
 }
 

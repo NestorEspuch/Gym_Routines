@@ -351,5 +351,10 @@ namespace Gym_Routines
         {
             mostrarPlanSeleccionado(readDietaPlanSeleccionado(),readRutinaPlanSeleccionado());
         }
+
+        private void menuLateral_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
