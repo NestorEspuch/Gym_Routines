@@ -11,6 +11,8 @@ namespace Gym_Routines
     public partial class Inicio : Form
     {
         bool movLogin = false;
+        DataTable dtDieta = new DataTable();
+        DataTable dtRutina = new DataTable();
 
         public Inicio()
         {
@@ -20,7 +22,8 @@ namespace Gym_Routines
 
         private void menuPrincipal_Load(object sender, EventArgs e)
         {
-
+            mostrarDietas(readDietas());
+            mostrarRutinas(readRutinas());
         }
 
         private void efectosPlantilla()
@@ -234,27 +237,8 @@ namespace Gym_Routines
                 }
             }
         }
-
-        #region "Mostrar"
-        public void mostrarDietaHipertrofia(List<Dieta> dietas)
-        {
-            DataTable tablaFiltros = (DataTable)dataGridViewDietas.DataSource;
-            DataView filtros = new DataView(tablaFiltros);
-            filtros.RowFilter = "type = Hipertrofia";
-        }
-
-        public void mostrarDietaDefinicion(List<Dieta> dietas)
-        {
-            foreach (Dieta d in dietas)
-            {
-                if (d.GetTipo().Equals("Definicion"))
-                {
-                    dataGridViewDietas.Rows.Add(d.GetTipo(), d.GetComidas()[0].GetNombre(), d.GetComidas()[1].GetNombre(),
-                    d.GetComidas()[2].GetNombre(), d.GetComidas()[3].GetNombre(), d.GetComidas()[4].GetNombre(), d.GetTotalCalorias(),
-                    d.GetTotalProteinas(), d.GetTotalHidratos(), d.GetTotalGrasas());
-                }
-            }
-        }
+        
+        #region "Mostrar"       
 
         public void mostrarRutinaHipertrofia(List<Rutina> rutinas)
         {
@@ -270,17 +254,46 @@ namespace Gym_Routines
 
         private void mostrarDietas(List<Dieta> lista)
         {
+            dtDieta.Columns.Add("Type", typeof(string));
+            dtDieta.Columns.Add("1.- Food", typeof(string));
+            dtDieta.Columns.Add("2.- Food", typeof(string));
+            dtDieta.Columns.Add("3.- Food", typeof(string));
+            dtDieta.Columns.Add("4.- Food", typeof(string));
+            dtDieta.Columns.Add("5.- Food", typeof(string));
+            dtDieta.Columns.Add("T.Calories", typeof(string));
+            dtDieta.Columns.Add("T.Proteins", typeof(string));
+            dtDieta.Columns.Add("T.CarboHidrates", typeof(string));
+            dtDieta.Columns.Add("T.Fats", typeof(string));
+
             foreach (Dieta d in lista)
-            {
-                dataGridViewDietas.Rows.Add(d.GetTipo(), d.GetComidas()[0].GetNombre(), d.GetComidas()[1].GetNombre(),
+            {                
+                dtDieta.Rows.Add(d.GetTipo(), d.GetComidas()[0].GetNombre(), d.GetComidas()[1].GetNombre(),
                     d.GetComidas()[2].GetNombre(), d.GetComidas()[3].GetNombre(), d.GetComidas()[4].GetNombre(), d.GetTotalCalorias(),
                     d.GetTotalProteinas(), d.GetTotalHidratos(), d.GetTotalGrasas());
             }
+
+            dataGridViewDietas.DataSource = dtDieta;
         }
 
         private void mostrarRutinas(List<Rutina> lista)
         {
-            
+            dtRutina.Columns.Add("Type", typeof(string));
+            dtRutina.Columns.Add("1.- Exercise", typeof(string));
+            dtRutina.Columns.Add("2.- Exercise", typeof(string));
+            dtRutina.Columns.Add("3.- Exercise", typeof(string));
+            dtRutina.Columns.Add("4.- Exercise", typeof(string));
+            dtRutina.Columns.Add("5.- Exercise", typeof(string));
+            dtRutina.Columns.Add("Difficulty", typeof(string));
+            dtRutina.Columns.Add("Training days", typeof(string));
+
+            foreach (Rutina r in lista)
+            {
+                dtRutina.Rows.Add(r.GetTipo(), r.GetEjercicios()[0].GetNombre(), r.GetEjercicios()[1].GetNombre(),
+                    r.GetEjercicios()[2].GetNombre(), r.GetEjercicios()[3].GetNombre(), r.GetEjercicios()[4].GetNombre(), r.GetDificultad(),
+                    r.GetDiasEntrenamiento());
+            }
+
+            dataGridViewRutinas.DataSource = dtRutina;
         }
 
         private void mostrarPlanSeleccionado(List<Dieta> dieta, List<Rutina> rutina)
@@ -313,37 +326,41 @@ namespace Gym_Routines
 
         private void button1_Click(object sender, EventArgs e)
         {
+            dtRutina.DefaultView.RowFilter = null;
+            dataGridViewDietas.Visible = false;
+            dataGridViewRutinas.Visible = true;
             mostrarSubmenu(submenuRutinas);
         }
 
         private void Dietas_Click(object sender, EventArgs e)
         {
+            dtDietas.DefaultView.RowFilter = null;
+            dataGridViewRutinas.Visible = false;
             dataGridViewDietas.Visible = true;
             mostrarSubmenu(submenuDietas);
-            mostrarDietas(readDietas());
         }
 
         private void dietaDefinicion_Click(object sender, EventArgs e)
         {
+            dtDieta.DefaultView.RowFilter = String.Format("Type LIKE '%{0}%'", "Definicion");
             dataGridViewDietas.Visible = true;
             dataGridViewRutinas.Visible = false;
-            mostrarDietaDefinicion(readDietas());
             ocultarSubmenu();
         }
 
         private void dietaTodas_Click(object sender, EventArgs e)
         {
+            dtDieta.DefaultView.RowFilter = null;
             dataGridViewDietas.Visible = true;
             dataGridViewRutinas.Visible = false;
-            mostrarDietas(readDietas());
             ocultarSubmenu();
         }
 
         private void dietaHipertrofia_Click(object sender, EventArgs e)
         {
+            dtDieta.DefaultView.RowFilter = String.Format("Type LIKE '%{0}%'", "Hipertrofia");
             dataGridViewDietas.Visible = true;
             dataGridViewRutinas.Visible = false;
-            mostrarDietaHipertrofia(readDietas());
             ocultarSubmenu();
         }
 
@@ -355,14 +372,15 @@ namespace Gym_Routines
 
         private void rutinaTodas_Click(object sender, EventArgs e)
         {
+            dtRutina.DefaultView.RowFilter = null;
             dataGridViewDietas.Visible = false;
             dataGridViewRutinas.Visible = true;
-            mostrarRutinas(readRutinas());
             ocultarSubmenu();
         }
 
         private void rutinaDefinicion_Click(object sender, EventArgs e)
         {
+            dtRutina.DefaultView.RowFilter = String.Format("Type LIKE '%{0}%'", "Definicion");
             dataGridViewDietas.Visible = false;
             dataGridViewRutinas.Visible = true;
             ocultarSubmenu();
@@ -370,9 +388,9 @@ namespace Gym_Routines
 
         private void rutinaHipertrofia_Click(object sender, EventArgs e)
         {
+            dtRutina.DefaultView.RowFilter = String.Format("Type LIKE '%{0}%'", "Hipertrofia");
             dataGridViewDietas.Visible = false;
             dataGridViewRutinas.Visible = true;
-            mostrarRutinaHipertrofia(readRutinas());
             ocultarSubmenu();
         }
 
