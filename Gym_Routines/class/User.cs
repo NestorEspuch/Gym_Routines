@@ -18,8 +18,10 @@ namespace Gym_Routines
             this.pwd = pwd;
             this.email = email;    
         }
+
         public User() : this("","","","") { }
 
+        #region "Get/Set"
         public void SetFullName(string fullName)
         {
             this.fullName = fullName;
@@ -51,6 +53,14 @@ namespace Gym_Routines
         public string GetEmail()
         {
             return email;
+        }
+        #endregion
+
+        public override string ToString()
+        {
+            return $"{fullName}:\n" +
+                $"{user} - {pwd} \n" +
+                $"{email}";
         }
     }
 }

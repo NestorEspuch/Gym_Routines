@@ -12,6 +12,7 @@ namespace Gym_Routines
         double totalProteinas;
         double totalHidratos;
         double totalGrasas;
+
         public Dieta(List<Comida> comidas, string tipo)
         {
             this.comidas = comidas;
@@ -21,7 +22,10 @@ namespace Gym_Routines
             this.totalHidratos = CalcularTotalHidratos();
             this.totalGrasas = CalcularTotalGrasas();
         }
+
         public Dieta() : this(new List<Comida>(),"") { }
+
+        #region "Get/Set/Add"
         public void SetComidas(List<Comida> comidas)
         {
             this.comidas = comidas;
@@ -74,6 +78,8 @@ namespace Gym_Routines
         {
             return totalGrasas;
         }
+        #endregion
+
         public override string ToString()
         {
             string result = $"{tipo}\n";
@@ -87,6 +93,9 @@ namespace Gym_Routines
                 $"Grasas totales: {totalGrasas}";
             return result;
         }
+
+        #region "CalculateTotals"
+
         public double CalcularTotalCalorias()
         {
             double total = 0;
@@ -96,6 +105,7 @@ namespace Gym_Routines
             }
             return total;
         }
+
         public double CalcularTotalProteinas()
         {
             double total = 0;
@@ -105,6 +115,7 @@ namespace Gym_Routines
             }
             return total;
         }
+
         public double CalcularTotalHidratos()
         {
             double total = 0;
@@ -114,6 +125,7 @@ namespace Gym_Routines
             }
             return total;
         }
+
         public double CalcularTotalGrasas()
         {
             double total = 0;
@@ -123,5 +135,6 @@ namespace Gym_Routines
             }
             return total;
         }
+        #endregion
     }
 }

@@ -14,40 +14,12 @@ namespace Gym_Routines
 {
     public partial class Register : Form
     {
+        bool movLogin = false;
+
         public Register()
         {
             InitializeComponent();
             boxInfo.TabStop = false;
-        }
-
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnMinimizar_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
-        bool movLogin = false;
-
-        private void panelTitulo_MouseDown(object sender, MouseEventArgs e)
-        {
-            movLogin = true;
-        }
-
-        private void panelTitulo_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (movLogin)
-            {
-                this.Location = Cursor.Position;
-            }
-        }
-
-        private void panelTitulo_MouseUp(object sender, MouseEventArgs e)
-        {
-            movLogin = false;
         }
 
         private void saveUser()
@@ -68,6 +40,7 @@ namespace Gym_Routines
             }
         }
 
+        #region "Chekcs"
         private bool checks()
         {
             if(!isNullBox())
@@ -158,6 +131,8 @@ namespace Gym_Routines
             return true;
         }
 
+        #endregion
+
         private void textBoxPwd_TextChanged(object sender, EventArgs e)
         {
             textBoxPwd.UseSystemPasswordChar = true;
@@ -168,6 +143,17 @@ namespace Gym_Routines
             textBoxRPassword.UseSystemPasswordChar = true;
         }
 
+        #region "Styles"
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
         private void btnRegister_Click(object sender, EventArgs e)
         {
             if (checks())
@@ -176,5 +162,24 @@ namespace Gym_Routines
              * Thread.Sleep(1900);
              this.Hide();*/
         }
+
+        private void panelTitulo_MouseDown(object sender, MouseEventArgs e)
+        {
+            movLogin = true;
+        }
+
+        private void panelTitulo_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (movLogin)
+            {
+                this.Location = Cursor.Position;
+            }
+        }
+
+        private void panelTitulo_MouseUp(object sender, MouseEventArgs e)
+        {
+            movLogin = false;
+        }
+        #endregion
     }
 }

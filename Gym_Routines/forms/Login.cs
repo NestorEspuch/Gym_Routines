@@ -11,6 +11,8 @@ namespace Gym_Routines
 {
     public partial class Login : Form
     {
+        bool movLogin = false;
+
         public Login()
         {
             InitializeComponent();
@@ -20,65 +22,7 @@ namespace Gym_Routines
             }
             boxInfo.TabStop = false;
         }
-        private void fillUser()
-        {
-            try
-            {
-                StreamReader file = new StreamReader("../../../data/rememberUser.txt");
-                string line = file.ReadLine();
-                if(line != null)
-                {
-                    string[] split = line.Split(';');
-                    boxUser.Text = split[0];
-                    boxPwd.Text = split[1];
-                }
-                file.Close();
-            }
-            catch(IOException error)
-            {
-                Console.WriteLine("Error de lectura de rememberUser.txt: "+error.Message);
-            }
-        }
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
 
-        private void btnMinimizar_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
-        bool movLogin = false;
-
-        private void panelTitulo_MouseDown(object sender, MouseEventArgs e)
-        {
-            movLogin = true;
-        }
-
-        private void panelTitulo_MouseMove(object sender, MouseEventArgs e)
-        {
-            if(movLogin)
-            {
-                this.Location = Cursor.Position;
-            }
-        }
-
-        private void panelTitulo_MouseUp(object sender, MouseEventArgs e)
-        {
-            movLogin = false;
-        }
-
-        private void boxPwd_TextChanged(object sender, EventArgs e)
-        {
-            boxPwd.UseSystemPasswordChar = true;
-        }
-
-        private void btnRegister_Click(object sender, EventArgs e)
-        {
-            Register registro = new Register();
-            registro.Show();
-        }
         private List<User> readUsers()
         {
             List<User> list = new List<User>();
@@ -101,6 +45,46 @@ namespace Gym_Routines
                 return null;
             }
         }
+
+        private void fillUser()
+        {
+            try
+            {
+                StreamReader file = new StreamReader("../../../data/rememberUser.txt");
+                string line = file.ReadLine();
+                if(line != null)
+                {
+                    string[] split = line.Split(';');
+                    boxUser.Text = split[0];
+                    boxPwd.Text = split[1];
+                }
+                file.Close();
+            }
+            catch(IOException error)
+            {
+                Console.WriteLine("Error de lectura de rememberUser.txt: "+error.Message);
+            }
+        }
+
+        private void saveRemenberUser()
+        {
+            try
+            {
+                StreamWriter writer = new StreamWriter("../../../data/rememberUser.txt");
+                writer.Write(boxUser.Text+";"+boxPwd.Text);
+                writer.Close();
+            }
+            catch(IOException error)
+            {
+                Console.WriteLine("Error al guardar usuario: "+error.Message);
+            }
+        }
+
+        private void boxPwd_TextChanged(object sender, EventArgs e)
+        {
+            boxPwd.UseSystemPasswordChar = true;
+        }
+
         private bool checkUser(List<User> listUsers)
         {
             bool be = false;
@@ -113,6 +97,19 @@ namespace Gym_Routines
             }
             return be;
         }
+
+        private void cbRemember_CheckedChanged(object sender, EventArgs e)
+        {
+            saveRemenberUser();
+        }
+
+        #region "Click"
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            Register registro = new Register();
+            registro.Show();
+        }
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
             Inicio inicio = new Inicio();
@@ -128,22 +125,36 @@ namespace Gym_Routines
                 Console.WriteLine("El usuario no se encuentra registrado");
             }
         }
-        private void saveRemenberUser()
+
+        private void btnCerrar_Click(object sender, EventArgs e)
         {
-            try
+            Application.Exit();
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        #endregion
+
+        private void panelTitulo_MouseDown(object sender, MouseEventArgs e)
+        {
+            movLogin = true;
+        }
+
+        private void panelTitulo_MouseMove(object sender, MouseEventArgs e)
+        {
+            if(movLogin)
             {
-                StreamWriter writer = new StreamWriter("../../../data/rememberUser.txt");
-                writer.Write(boxUser.Text+";"+boxPwd.Text);
-                writer.Close();
-            }
-            catch(IOException error)
-            {
-                Console.WriteLine("Error al guardar usuario: "+error.Message);
+                this.Location = Cursor.Position;
             }
         }
-        private void cbRemember_CheckedChanged(object sender, EventArgs e)
+
+        private void panelTitulo_MouseUp(object sender, MouseEventArgs e)
         {
-            saveRemenberUser();
+            movLogin = false;
         }
+
     }
 }

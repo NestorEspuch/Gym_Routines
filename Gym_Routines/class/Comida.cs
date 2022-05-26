@@ -11,6 +11,7 @@ namespace Gym_Routines
         double proteinas;
         double hidratos;
         double grasas;
+
         public Comida(string nombre, double calorias, double proteinas, double hidratos, double grasas)
         {
             this.nombre = nombre;
@@ -19,7 +20,10 @@ namespace Gym_Routines
             this.hidratos = hidratos;
             this.grasas = grasas;
         }
+
         public Comida() : this("",0,0,0,0) { }
+
+        #region "Get/Set/Add"
         public void SetNombre(string nombre)
         {
             this.nombre = nombre;
@@ -60,6 +64,8 @@ namespace Gym_Routines
         {
             return grasas;
         }
+        #endregion
+
         public override string ToString()
         {
             return $"{nombre}\n" +
@@ -68,6 +74,7 @@ namespace Gym_Routines
                 $" - hidratos: {hidratos}\n" +
                 $" - grasas: {grasas}";
         }
+
         public int CompareTo(Comida comida)
         {
             if (String.Compare(this.nombre, comida.nombre) < 0)

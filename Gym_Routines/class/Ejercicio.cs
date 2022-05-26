@@ -9,13 +9,17 @@ namespace Gym_Routines
         string nombre;
         string dificultad;
         string musculo;
+
         public Ejercicio(string nombre, string dificultad, string musculo)
         {
             this.nombre = nombre;
             this.dificultad = dificultad;
             this.musculo = musculo;
         }
+
         public Ejercicio() : this("","","") { }
+
+        #region "Get/Set"
         public void SetNombre(string nombre)
         {
             this.nombre = nombre;
@@ -40,10 +44,14 @@ namespace Gym_Routines
         {
             return musculo;
         }
+
+        #endregion
+
         public override string ToString()
         {
             return $" Dificultad: {dificultad}, Musculo: {musculo}";
         }
+
         public int CompareTo(Ejercicio ejercicio)
         {
             if (String.Compare(this.nombre, ejercicio.nombre) < 0)
