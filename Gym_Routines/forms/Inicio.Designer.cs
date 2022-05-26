@@ -53,12 +53,25 @@ namespace Gym_Routines
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.listBoxContenido = new System.Windows.Forms.ListBox();
             this.dataGridViewDietas = new System.Windows.Forms.DataGridView();
+            this.dataGridViewRutinas = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.exercise1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.exercise2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.exercise3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.exercise4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.exercise5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.difficulty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.trainingDays = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.food1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.food2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.food3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.food4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.food5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalCalories = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalProteins = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalHydrates = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalFat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuLateral.SuspendLayout();
             this.submenuRutinas.SuspendLayout();
             this.submenuDietas.SuspendLayout();
@@ -68,6 +81,7 @@ namespace Gym_Routines
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDietas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRutinas)).BeginInit();
             this.SuspendLayout();
             // 
             // menuLateral
@@ -404,12 +418,75 @@ namespace Gym_Routines
             this.food2,
             this.food3,
             this.food4,
-            this.food5});
-            this.dataGridViewDietas.Location = new System.Drawing.Point(491, 147);
+            this.food5,
+            this.totalCalories,
+            this.totalProteins,
+            this.totalHydrates,
+            this.totalFat});
+            this.dataGridViewDietas.Location = new System.Drawing.Point(206, 48);
             this.dataGridViewDietas.Name = "dataGridViewDietas";
             this.dataGridViewDietas.RowTemplate.Height = 25;
-            this.dataGridViewDietas.Size = new System.Drawing.Size(642, 434);
+            this.dataGridViewDietas.Size = new System.Drawing.Size(1295, 434);
             this.dataGridViewDietas.TabIndex = 4;
+            // 
+            // dataGridViewRutinas
+            // 
+            this.dataGridViewRutinas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewRutinas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewRutinas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.exercise1,
+            this.exercise2,
+            this.exercise3,
+            this.exercise4,
+            this.exercise5,
+            this.difficulty,
+            this.trainingDays});
+            this.dataGridViewRutinas.Location = new System.Drawing.Point(206, 48);
+            this.dataGridViewRutinas.Name = "dataGridViewRutinas";
+            this.dataGridViewRutinas.RowTemplate.Height = 25;
+            this.dataGridViewRutinas.Size = new System.Drawing.Size(1295, 366);
+            this.dataGridViewRutinas.TabIndex = 5;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Type";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // exercise1
+            // 
+            this.exercise1.HeaderText = "1.- Exercise";
+            this.exercise1.Name = "exercise1";
+            // 
+            // exercise2
+            // 
+            this.exercise2.HeaderText = "2.- Exercise";
+            this.exercise2.Name = "exercise2";
+            // 
+            // exercise3
+            // 
+            this.exercise3.HeaderText = "3.- Exercise";
+            this.exercise3.Name = "exercise3";
+            // 
+            // exercise4
+            // 
+            this.exercise4.HeaderText = "4.- Exercise";
+            this.exercise4.Name = "exercise4";
+            // 
+            // exercise5
+            // 
+            this.exercise5.HeaderText = "5.- Exercise";
+            this.exercise5.Name = "exercise5";
+            // 
+            // difficulty
+            // 
+            this.difficulty.HeaderText = "Difficulty";
+            this.difficulty.Name = "difficulty";
+            // 
+            // trainingDays
+            // 
+            this.trainingDays.HeaderText = "Training days";
+            this.trainingDays.Name = "trainingDays";
             // 
             // type
             // 
@@ -441,12 +518,33 @@ namespace Gym_Routines
             this.food5.HeaderText = "5.- Food";
             this.food5.Name = "food5";
             // 
+            // totalCalories
+            // 
+            this.totalCalories.HeaderText = "T.Calories";
+            this.totalCalories.Name = "totalCalories";
+            // 
+            // totalProteins
+            // 
+            this.totalProteins.HeaderText = "T.Proteins";
+            this.totalProteins.Name = "totalProteins";
+            // 
+            // totalHydrates
+            // 
+            this.totalHydrates.HeaderText = "T.Carbohydrates";
+            this.totalHydrates.Name = "totalHydrates";
+            // 
+            // totalFat
+            // 
+            this.totalFat.HeaderText = "T.Fat";
+            this.totalFat.Name = "totalFat";
+            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.ClientSize = new System.Drawing.Size(1924, 894);
+            this.Controls.Add(this.dataGridViewRutinas);
             this.Controls.Add(this.dataGridViewDietas);
             this.Controls.Add(this.listBoxContenido);
             this.Controls.Add(this.panelTitulo);
@@ -472,6 +570,7 @@ namespace Gym_Routines
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDietas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRutinas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -501,12 +600,25 @@ namespace Gym_Routines
         private System.Windows.Forms.Button dietaDefinicion;
         private System.Windows.Forms.TextBox textBoxInfo;
         private System.Windows.Forms.DataGridView dataGridViewDietas;
+        private System.Windows.Forms.DataGridView dataGridViewRutinas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn exercise1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn exercise2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn exercise3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn exercise4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn exercise5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn difficulty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn trainingDays;
         private System.Windows.Forms.DataGridViewTextBoxColumn type;
         private System.Windows.Forms.DataGridViewTextBoxColumn food1;
         private System.Windows.Forms.DataGridViewTextBoxColumn food2;
         private System.Windows.Forms.DataGridViewTextBoxColumn food3;
         private System.Windows.Forms.DataGridViewTextBoxColumn food4;
         private System.Windows.Forms.DataGridViewTextBoxColumn food5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn totalCalories;
+        private System.Windows.Forms.DataGridViewTextBoxColumn totalProteins;
+        private System.Windows.Forms.DataGridViewTextBoxColumn totalHydrates;
+        private System.Windows.Forms.DataGridViewTextBoxColumn totalFat;
     }
 }
 

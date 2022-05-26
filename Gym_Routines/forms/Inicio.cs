@@ -82,6 +82,7 @@ namespace Gym_Routines
         {
             submenuDietas.Visible = false;
             submenuRutinas.Visible = false;
+            dataGridViewDietas.Visible = false;
         }
         private void ocultarSubmenu()
         {
@@ -115,6 +116,8 @@ namespace Gym_Routines
 
         private void dietaDefinicion_Click(object sender, EventArgs e)
         {
+            dataGridViewDietas.Visible = true;
+            dataGridViewRutinas.Visible = false;
             mostrarDietaDefinicion(readDietas());
             ocultarSubmenu();
         }
@@ -202,12 +205,16 @@ namespace Gym_Routines
 
         private void dietaTodas_Click(object sender, EventArgs e)
         {
+            dataGridViewDietas.Visible = true;
+            dataGridViewRutinas.Visible = false;
             mostrarDietas(readDietas());
             ocultarSubmenu();
         }
 
         private void dietaHipertrofia_Click(object sender, EventArgs e)
         {
+            dataGridViewDietas.Visible = true;
+            dataGridViewRutinas.Visible = false;
             mostrarDietaHipertrofia(readDietas());
             ocultarSubmenu();
         }
@@ -254,18 +261,24 @@ namespace Gym_Routines
 
         private void rutinaTodas_Click(object sender, EventArgs e)
         {
+            dataGridViewDietas.Visible = false;
+            dataGridViewRutinas.Visible = true;
             mostrarRutinas(readRutinas());
             ocultarSubmenu();
         }
 
         private void rutinaDefinicion_Click(object sender, EventArgs e)
         {
+            dataGridViewDietas.Visible = false;
+            dataGridViewRutinas.Visible = true;
             mostrarRutinaDefinicion(readRutinas());
             ocultarSubmenu();
         }
 
         private void rutinaHipertrofia_Click(object sender, EventArgs e)
         {
+            dataGridViewDietas.Visible = false;
+            dataGridViewRutinas.Visible = true;
             mostrarRutinaHipertrofia(readRutinas());
             ocultarSubmenu();
         }
