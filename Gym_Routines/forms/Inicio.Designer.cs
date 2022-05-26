@@ -51,7 +51,6 @@ namespace Gym_Routines
             this.labelTitle = new System.Windows.Forms.Label();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.listBoxContenido = new System.Windows.Forms.ListBox();
             this.dataGridViewDietas = new System.Windows.Forms.DataGridView();
             this.type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.food1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -393,25 +392,12 @@ namespace Gym_Routines
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // listBoxContenido
-            // 
-            this.listBoxContenido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.listBoxContenido.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBoxContenido.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.listBoxContenido.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.listBoxContenido.ForeColor = System.Drawing.Color.White;
-            this.listBoxContenido.FormattingEnabled = true;
-            this.listBoxContenido.ItemHeight = 19;
-            this.listBoxContenido.Location = new System.Drawing.Point(206, 48);
-            this.listBoxContenido.Name = "listBoxContenido";
-            this.listBoxContenido.Size = new System.Drawing.Size(1706, 1007);
-            this.listBoxContenido.TabIndex = 3;
-            this.listBoxContenido.DoubleClick += new System.EventHandler(this.listBoxContenido_DoubleClick);
-            // 
             // dataGridViewDietas
             // 
             this.dataGridViewDietas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewDietas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(80)))), ((int)(((byte)(142)))));
             this.dataGridViewDietas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewDietas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dataGridViewDietas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDietas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.type,
@@ -424,7 +410,8 @@ namespace Gym_Routines
             this.totalProteins,
             this.totalHydrates,
             this.totalFat});
-            this.dataGridViewDietas.Location = new System.Drawing.Point(206, 154);
+            this.dataGridViewDietas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(70)))), ((int)(((byte)(72)))));
+            this.dataGridViewDietas.Location = new System.Drawing.Point(228, 170);
             this.dataGridViewDietas.Name = "dataGridViewDietas";
             this.dataGridViewDietas.RowTemplate.Height = 25;
             this.dataGridViewDietas.Size = new System.Drawing.Size(1295, 434);
@@ -483,6 +470,9 @@ namespace Gym_Routines
             // dataGridViewRutinas
             // 
             this.dataGridViewRutinas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewRutinas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(80)))), ((int)(((byte)(142)))));
+            this.dataGridViewRutinas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewRutinas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dataGridViewRutinas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewRutinas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -493,6 +483,7 @@ namespace Gym_Routines
             this.exercise5,
             this.difficulty,
             this.trainingDays});
+            this.dataGridViewRutinas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(70)))), ((int)(((byte)(72)))));
             this.dataGridViewRutinas.Location = new System.Drawing.Point(206, 48);
             this.dataGridViewRutinas.Name = "dataGridViewRutinas";
             this.dataGridViewRutinas.RowTemplate.Height = 25;
@@ -547,7 +538,6 @@ namespace Gym_Routines
             this.ClientSize = new System.Drawing.Size(1924, 894);
             this.Controls.Add(this.dataGridViewDietas);
             this.Controls.Add(this.dataGridViewRutinas);
-            this.Controls.Add(this.listBoxContenido);
             this.Controls.Add(this.panelTitulo);
             this.Controls.Add(this.menuLateral);
             this.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -593,7 +583,6 @@ namespace Gym_Routines
         private System.Windows.Forms.Button btnNewRutina;
         private System.Windows.Forms.PictureBox imgLogo;
         private System.Windows.Forms.Button planSeleccionado;
-        private System.Windows.Forms.ListBox listBoxContenido;
         private System.Windows.Forms.Panel submenuDietas;
         private System.Windows.Forms.Button btnNewDieta;
         private System.Windows.Forms.Button dietaTodas;
