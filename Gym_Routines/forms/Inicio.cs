@@ -352,9 +352,61 @@ namespace Gym_Routines
             mostrarPlanSeleccionado(readDietaPlanSeleccionado(),readRutinaPlanSeleccionado());
         }
 
-        private void menuLateral_Paint(object sender, PaintEventArgs e)
+        private void writePlanSeleccionado(int index)
         {
+            List<string> plan = new List<string>();
 
+            try
+            {
+                StreamReader file = new StreamReader("../../../data/planSeleccionado.txt");
+                string line = file.ReadLine();
+
+                while(line != null)
+                {
+                    plan.Add(line);
+                    line = file.ReadLine();
+                }
+            }
+            catch(IOException error)
+            {
+                textBoxInfo.Text = "Error de lectura plan seleccionado: " + error.Message;
+            }
+
+            if(Dietas.Enabled)
+            {
+                try
+                {
+                    StreamWriter file = new StreamWriter("../../../data/planSeleccionado.txt");
+                    file.WriteLine(readDietas()[index]);
+                    file.WriteLine(plan[1]);
+                }
+                catch(IOException error)
+                {
+                    textBoxInfo.Text = "Error escritura dieta: "+error.Message;
+                }
+            }
+            else if(rutinas.Enabled)
+            {
+                try
+                {
+                    StreamWriter file = new StreamWriter("../../../data/planSeleccionado.txt");
+                    file.WriteLine(plan[0]);
+                    file.WriteLine(readRutinas()[index]);
+                }
+                catch (IOException error)
+                {
+                    textBoxInfo.Text = "Error escritura rutina: "+error.Message;
+                }
+            }
+        }
+
+        private void listBoxContenido_DoubleClick(object sender, EventArgs e)
+        {
+            if (listBoxContenido.SelectedItem != null)
+            {
+                writePlanSeleccionado(listBoxContenido.SelectedIndex);
+                listBoxContenido.SelectedItems.ToString();
+            }
         }
     }
 }
