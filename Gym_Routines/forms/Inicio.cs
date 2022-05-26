@@ -153,7 +153,7 @@ namespace Gym_Routines
             }
             catch (IOException error)
             {
-                listBoxContenido.Text = "Error de lectura fichero planSeleccionado.txt: " + error.Message;
+                textBoxInfo.Text = "Error de lectura fichero planSeleccionado.txt: " + error.Message;
                 return null;
             }
         }
@@ -182,7 +182,7 @@ namespace Gym_Routines
             }
             catch (IOException error)
             {
-                listBoxContenido.Text = "Error de lectura fichero planSeleccionado.txt: " + error.Message;
+                textBoxInfo.Text = "Error de lectura fichero planSeleccionado.txt: " + error.Message;
                 return null;
             }
         }
@@ -266,25 +266,10 @@ namespace Gym_Routines
                     lista.Add(r);
                 }
             }
-            listBoxContenido.DataSource = lista;
-        }
-
-        public void mostrarRutinaDefinicion(List<Rutina> rutinas)
-        {
-            List<Rutina> lista = new List<Rutina>();
-            foreach (Rutina r in rutinas)
-            {
-                if (r.GetTipo() == "Definicion")
-                {
-                    lista.Add(r);
-                }
-            }
-            listBoxContenido.DataSource = lista;
         }
 
         private void mostrarDietas(List<Dieta> lista)
         {
-            dataGridViewDietas.DataSource = lista;
             foreach (Dieta d in lista)
             {
                 dataGridViewDietas.Rows.Add(d.GetTipo(), d.GetComidas()[0].GetNombre(), d.GetComidas()[1].GetNombre(),
@@ -295,16 +280,18 @@ namespace Gym_Routines
 
         private void mostrarRutinas(List<Rutina> lista)
         {
-            listBoxContenido.DataSource = lista;
+            
         }
 
         private void mostrarPlanSeleccionado(List<Dieta> dieta, List<Rutina> rutina)
         {
+            /*
             List<string> lista = new List<string>();
             lista.Add(dieta[0].ToString());
             lista.Add(rutina[0].ToString());
 
             listBoxContenido.DataSource = lista;
+            */
         }
         #endregion
 
@@ -378,7 +365,6 @@ namespace Gym_Routines
         {
             dataGridViewDietas.Visible = false;
             dataGridViewRutinas.Visible = true;
-            mostrarRutinaDefinicion(readRutinas());
             ocultarSubmenu();
         }
 
@@ -409,15 +395,6 @@ namespace Gym_Routines
         private void planSeleccionado_Click(object sender, EventArgs e)
         {
             mostrarPlanSeleccionado(readDietaPlanSeleccionado(), readRutinaPlanSeleccionado());
-        }
-
-        private void listBoxContenido_DoubleClick(object sender, EventArgs e)
-        {
-            if (listBoxContenido.SelectedItem != null)
-            {
-                writePlanSeleccionado(listBoxContenido.SelectedIndex);
-                listBoxContenido.SelectedItems.ToString();
-            }
         }
 
         #endregion
