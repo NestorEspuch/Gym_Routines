@@ -336,14 +336,6 @@ namespace Gym_Routines
             ocultarSubmenu();
         }
 
-        private void dietaTodas_Click(object sender, EventArgs e)
-        {
-            dtDieta.DefaultView.RowFilter = null;
-            dataGridViewDietas.Visible = true;
-            dataGridViewRutinas.Visible = false;
-            ocultarSubmenu();
-        }
-
         private void dietaHipertrofia_Click(object sender, EventArgs e)
         {
             dtDieta.DefaultView.RowFilter = String.Format("Type LIKE '%{0}%'", "Hipertrofia");
@@ -356,14 +348,6 @@ namespace Gym_Routines
         {
             NewDieta dieta = new NewDieta();
             dieta.Show();
-        }
-
-        private void rutinaTodas_Click(object sender, EventArgs e)
-        {
-            dtRutina.DefaultView.RowFilter = null;
-            dataGridViewDietas.Visible = false;
-            dataGridViewRutinas.Visible = true;
-            ocultarSubmenu();
         }
 
         private void rutinaDefinicion_Click(object sender, EventArgs e)

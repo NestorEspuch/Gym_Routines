@@ -38,13 +38,11 @@ namespace Gym_Routines
             this.planSeleccionado = new System.Windows.Forms.Button();
             this.submenuRutinas = new System.Windows.Forms.Panel();
             this.btnNewRutina = new System.Windows.Forms.Button();
-            this.rutinaTodas = new System.Windows.Forms.Button();
             this.rutinaHipertrofia = new System.Windows.Forms.Button();
             this.rutinaDefinicion = new System.Windows.Forms.Button();
             this.rutinas = new System.Windows.Forms.Button();
             this.submenuDietas = new System.Windows.Forms.Panel();
             this.btnNewDieta = new System.Windows.Forms.Button();
-            this.dietaTodas = new System.Windows.Forms.Button();
             this.dietaHipertrofia = new System.Windows.Forms.Button();
             this.dietaDefinicion = new System.Windows.Forms.Button();
             this.Dietas = new System.Windows.Forms.Button();
@@ -104,7 +102,7 @@ namespace Gym_Routines
             this.planSeleccionado.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.planSeleccionado.ForeColor = System.Drawing.Color.White;
             this.planSeleccionado.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.planSeleccionado.Location = new System.Drawing.Point(0, 560);
+            this.planSeleccionado.Location = new System.Drawing.Point(0, 479);
             this.planSeleccionado.Name = "planSeleccionado";
             this.planSeleccionado.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.planSeleccionado.Size = new System.Drawing.Size(200, 45);
@@ -118,13 +116,12 @@ namespace Gym_Routines
             // 
             this.submenuRutinas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.submenuRutinas.Controls.Add(this.btnNewRutina);
-            this.submenuRutinas.Controls.Add(this.rutinaTodas);
             this.submenuRutinas.Controls.Add(this.rutinaHipertrofia);
             this.submenuRutinas.Controls.Add(this.rutinaDefinicion);
             this.submenuRutinas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.submenuRutinas.Location = new System.Drawing.Point(0, 399);
+            this.submenuRutinas.Location = new System.Drawing.Point(0, 356);
             this.submenuRutinas.Name = "submenuRutinas";
-            this.submenuRutinas.Size = new System.Drawing.Size(200, 161);
+            this.submenuRutinas.Size = new System.Drawing.Size(200, 123);
             this.submenuRutinas.TabIndex = 6;
             // 
             // btnNewRutina
@@ -134,7 +131,7 @@ namespace Gym_Routines
             this.btnNewRutina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNewRutina.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnNewRutina.ForeColor = System.Drawing.Color.White;
-            this.btnNewRutina.Location = new System.Drawing.Point(0, 120);
+            this.btnNewRutina.Location = new System.Drawing.Point(0, 80);
             this.btnNewRutina.Name = "btnNewRutina";
             this.btnNewRutina.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btnNewRutina.Size = new System.Drawing.Size(200, 40);
@@ -143,23 +140,6 @@ namespace Gym_Routines
             this.btnNewRutina.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNewRutina.UseVisualStyleBackColor = true;
             this.btnNewRutina.Click += new System.EventHandler(this.btnNewRutina_Click);
-            // 
-            // rutinaTodas
-            // 
-            this.rutinaTodas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.rutinaTodas.FlatAppearance.BorderSize = 0;
-            this.rutinaTodas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rutinaTodas.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rutinaTodas.ForeColor = System.Drawing.Color.White;
-            this.rutinaTodas.Location = new System.Drawing.Point(0, 80);
-            this.rutinaTodas.Name = "rutinaTodas";
-            this.rutinaTodas.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.rutinaTodas.Size = new System.Drawing.Size(200, 40);
-            this.rutinaTodas.TabIndex = 2;
-            this.rutinaTodas.Text = "Todas";
-            this.rutinaTodas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.rutinaTodas.UseVisualStyleBackColor = true;
-            this.rutinaTodas.Click += new System.EventHandler(this.rutinaTodas_Click);
             // 
             // rutinaHipertrofia
             // 
@@ -202,7 +182,7 @@ namespace Gym_Routines
             this.rutinas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rutinas.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rutinas.ForeColor = System.Drawing.Color.White;
-            this.rutinas.Location = new System.Drawing.Point(0, 354);
+            this.rutinas.Location = new System.Drawing.Point(0, 311);
             this.rutinas.Name = "rutinas";
             this.rutinas.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.rutinas.Size = new System.Drawing.Size(200, 45);
@@ -216,13 +196,12 @@ namespace Gym_Routines
             // 
             this.submenuDietas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.submenuDietas.Controls.Add(this.btnNewDieta);
-            this.submenuDietas.Controls.Add(this.dietaTodas);
             this.submenuDietas.Controls.Add(this.dietaHipertrofia);
             this.submenuDietas.Controls.Add(this.dietaDefinicion);
             this.submenuDietas.Dock = System.Windows.Forms.DockStyle.Top;
             this.submenuDietas.Location = new System.Drawing.Point(0, 190);
             this.submenuDietas.Name = "submenuDietas";
-            this.submenuDietas.Size = new System.Drawing.Size(200, 164);
+            this.submenuDietas.Size = new System.Drawing.Size(200, 121);
             this.submenuDietas.TabIndex = 4;
             // 
             // btnNewDieta
@@ -232,7 +211,7 @@ namespace Gym_Routines
             this.btnNewDieta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNewDieta.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnNewDieta.ForeColor = System.Drawing.Color.White;
-            this.btnNewDieta.Location = new System.Drawing.Point(0, 120);
+            this.btnNewDieta.Location = new System.Drawing.Point(0, 80);
             this.btnNewDieta.Name = "btnNewDieta";
             this.btnNewDieta.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btnNewDieta.Size = new System.Drawing.Size(200, 40);
@@ -241,23 +220,6 @@ namespace Gym_Routines
             this.btnNewDieta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNewDieta.UseVisualStyleBackColor = true;
             this.btnNewDieta.Click += new System.EventHandler(this.btnNewDieta_Click);
-            // 
-            // dietaTodas
-            // 
-            this.dietaTodas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dietaTodas.FlatAppearance.BorderSize = 0;
-            this.dietaTodas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dietaTodas.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dietaTodas.ForeColor = System.Drawing.Color.White;
-            this.dietaTodas.Location = new System.Drawing.Point(0, 80);
-            this.dietaTodas.Name = "dietaTodas";
-            this.dietaTodas.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.dietaTodas.Size = new System.Drawing.Size(200, 40);
-            this.dietaTodas.TabIndex = 2;
-            this.dietaTodas.Text = "Todas";
-            this.dietaTodas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.dietaTodas.UseVisualStyleBackColor = true;
-            this.dietaTodas.Click += new System.EventHandler(this.dietaTodas_Click);
             // 
             // dietaHipertrofia
             // 
@@ -465,7 +427,6 @@ namespace Gym_Routines
 
         private System.Windows.Forms.Panel menuLateral;
         private System.Windows.Forms.Panel submenuRutinas;
-        private System.Windows.Forms.Button rutinaTodas;
         private System.Windows.Forms.Button rutinaHipertrofia;
         private System.Windows.Forms.Button rutinaDefinicion;
         private System.Windows.Forms.Button rutinas;
@@ -480,7 +441,6 @@ namespace Gym_Routines
         private System.Windows.Forms.Button planSeleccionado;
         private System.Windows.Forms.Panel submenuDietas;
         private System.Windows.Forms.Button btnNewDieta;
-        private System.Windows.Forms.Button dietaTodas;
         private System.Windows.Forms.Button dietaHipertrofia;
         private System.Windows.Forms.Button dietaDefinicion;
         private System.Windows.Forms.TextBox textBoxInfo;
