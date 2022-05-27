@@ -61,9 +61,8 @@ namespace Gym_Routines
             this.panelTitulo.Controls.Add(this.btnCerrar);
             this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitulo.Location = new System.Drawing.Point(0, 0);
-            this.panelTitulo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelTitulo.Name = "panelTitulo";
-            this.panelTitulo.Size = new System.Drawing.Size(441, 67);
+            this.panelTitulo.Size = new System.Drawing.Size(386, 50);
             this.panelTitulo.TabIndex = 0;
             this.panelTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitulo_MouseDown);
             this.panelTitulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTitulo_MouseMove);
@@ -74,19 +73,18 @@ namespace Gym_Routines
             this.labelTitle.AutoSize = true;
             this.labelTitle.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelTitle.ForeColor = System.Drawing.Color.Silver;
-            this.labelTitle.Location = new System.Drawing.Point(13, 19);
+            this.labelTitle.Location = new System.Drawing.Point(11, 14);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(192, 30);
+            this.labelTitle.Size = new System.Drawing.Size(147, 22);
             this.labelTitle.TabIndex = 4;
             this.labelTitle.Text = "GYM ROUTINES";
             // 
             // btnMinimizar
             // 
             this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
-            this.btnMinimizar.Location = new System.Drawing.Point(383, 0);
-            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnMinimizar.Location = new System.Drawing.Point(335, 0);
             this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(18, 67);
+            this.btnMinimizar.Size = new System.Drawing.Size(16, 50);
             this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.btnMinimizar.TabIndex = 3;
             this.btnMinimizar.TabStop = false;
@@ -95,10 +93,9 @@ namespace Gym_Routines
             // btnCerrar
             // 
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.Location = new System.Drawing.Point(409, 0);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCerrar.Location = new System.Drawing.Point(358, 0);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(18, 67);
+            this.btnCerrar.Size = new System.Drawing.Size(16, 50);
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.btnCerrar.TabIndex = 2;
             this.btnCerrar.TabStop = false;
@@ -110,10 +107,9 @@ namespace Gym_Routines
             this.panelPie.Controls.Add(this.linkForgotPwd);
             this.panelPie.Controls.Add(this.linkRRSS);
             this.panelPie.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelPie.Location = new System.Drawing.Point(0, 778);
-            this.panelPie.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelPie.Location = new System.Drawing.Point(0, 584);
             this.panelPie.Name = "panelPie";
-            this.panelPie.Size = new System.Drawing.Size(441, 27);
+            this.panelPie.Size = new System.Drawing.Size(386, 20);
             this.panelPie.TabIndex = 1;
             // 
             // linkForgotPwd
@@ -122,9 +118,9 @@ namespace Gym_Routines
             this.linkForgotPwd.AutoSize = true;
             this.linkForgotPwd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.linkForgotPwd.LinkColor = System.Drawing.Color.Silver;
-            this.linkForgotPwd.Location = new System.Drawing.Point(175, 4);
+            this.linkForgotPwd.Location = new System.Drawing.Point(153, 3);
             this.linkForgotPwd.Name = "linkForgotPwd";
-            this.linkForgotPwd.Size = new System.Drawing.Size(148, 21);
+            this.linkForgotPwd.Size = new System.Drawing.Size(116, 17);
             this.linkForgotPwd.TabIndex = 1;
             this.linkForgotPwd.TabStop = true;
             this.linkForgotPwd.Text = "Forgot password";
@@ -135,21 +131,21 @@ namespace Gym_Routines
             this.linkRRSS.AutoSize = true;
             this.linkRRSS.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.linkRRSS.LinkColor = System.Drawing.Color.Silver;
-            this.linkRRSS.Location = new System.Drawing.Point(127, 4);
+            this.linkRRSS.Location = new System.Drawing.Point(111, 3);
             this.linkRRSS.Name = "linkRRSS";
-            this.linkRRSS.Size = new System.Drawing.Size(46, 21);
+            this.linkRRSS.Size = new System.Drawing.Size(36, 17);
             this.linkRRSS.TabIndex = 0;
             this.linkRRSS.TabStop = true;
             this.linkRRSS.Text = "RRSS";
+            this.linkRRSS.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkRRSS_LinkClicked);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.No;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(81, 75);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(71, 56);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(283, 241);
+            this.pictureBox1.Size = new System.Drawing.Size(248, 181);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -159,28 +155,26 @@ namespace Gym_Routines
             this.labelUser.AutoSize = true;
             this.labelUser.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelUser.ForeColor = System.Drawing.Color.Silver;
-            this.labelUser.Location = new System.Drawing.Point(37, 331);
+            this.labelUser.Location = new System.Drawing.Point(32, 248);
             this.labelUser.Name = "labelUser";
-            this.labelUser.Size = new System.Drawing.Size(50, 23);
+            this.labelUser.Size = new System.Drawing.Size(42, 21);
             this.labelUser.TabIndex = 3;
             this.labelUser.Text = "User";
             // 
             // boxUser
             // 
             this.boxUser.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.boxUser.Location = new System.Drawing.Point(37, 363);
-            this.boxUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.boxUser.Location = new System.Drawing.Point(32, 272);
             this.boxUser.Name = "boxUser";
-            this.boxUser.Size = new System.Drawing.Size(364, 32);
+            this.boxUser.Size = new System.Drawing.Size(319, 27);
             this.boxUser.TabIndex = 4;
             // 
             // boxPwd
             // 
             this.boxPwd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.boxPwd.Location = new System.Drawing.Point(37, 448);
-            this.boxPwd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.boxPwd.Location = new System.Drawing.Point(32, 336);
             this.boxPwd.Name = "boxPwd";
-            this.boxPwd.Size = new System.Drawing.Size(364, 32);
+            this.boxPwd.Size = new System.Drawing.Size(319, 27);
             this.boxPwd.TabIndex = 6;
             this.boxPwd.TextChanged += new System.EventHandler(this.boxPwd_TextChanged);
             // 
@@ -189,9 +183,9 @@ namespace Gym_Routines
             this.labelPwd.AutoSize = true;
             this.labelPwd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelPwd.ForeColor = System.Drawing.Color.Silver;
-            this.labelPwd.Location = new System.Drawing.Point(37, 416);
+            this.labelPwd.Location = new System.Drawing.Point(32, 312);
             this.labelPwd.Name = "labelPwd";
-            this.labelPwd.Size = new System.Drawing.Size(103, 23);
+            this.labelPwd.Size = new System.Drawing.Size(82, 21);
             this.labelPwd.TabIndex = 5;
             this.labelPwd.Text = "Password";
             // 
@@ -200,10 +194,9 @@ namespace Gym_Routines
             this.cbRemember.AutoSize = true;
             this.cbRemember.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbRemember.ForeColor = System.Drawing.Color.Silver;
-            this.cbRemember.Location = new System.Drawing.Point(35, 507);
-            this.cbRemember.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cbRemember.Location = new System.Drawing.Point(31, 380);
             this.cbRemember.Name = "cbRemember";
-            this.cbRemember.Size = new System.Drawing.Size(160, 25);
+            this.cbRemember.Size = new System.Drawing.Size(127, 21);
             this.cbRemember.TabIndex = 7;
             this.cbRemember.Text = "Remember user";
             this.cbRemember.UseVisualStyleBackColor = true;
@@ -215,10 +208,9 @@ namespace Gym_Routines
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(35, 595);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnLogin.Location = new System.Drawing.Point(31, 446);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(365, 53);
+            this.btnLogin.Size = new System.Drawing.Size(319, 40);
             this.btnLogin.TabIndex = 8;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -230,10 +222,9 @@ namespace Gym_Routines
             this.btnRegister.FlatAppearance.BorderSize = 0;
             this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegister.ForeColor = System.Drawing.Color.White;
-            this.btnRegister.Location = new System.Drawing.Point(35, 677);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnRegister.Location = new System.Drawing.Point(31, 508);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(365, 53);
+            this.btnRegister.Size = new System.Drawing.Size(319, 40);
             this.btnRegister.TabIndex = 9;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = false;
@@ -245,18 +236,19 @@ namespace Gym_Routines
             this.boxInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.boxInfo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.boxInfo.ForeColor = System.Drawing.Color.Red;
-            this.boxInfo.Location = new System.Drawing.Point(81, 550);
+            this.boxInfo.Location = new System.Drawing.Point(71, 412);
+            this.boxInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.boxInfo.Name = "boxInfo";
-            this.boxInfo.Size = new System.Drawing.Size(283, 25);
+            this.boxInfo.Size = new System.Drawing.Size(248, 20);
             this.boxInfo.TabIndex = 10;
             this.boxInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.ClientSize = new System.Drawing.Size(441, 805);
+            this.ClientSize = new System.Drawing.Size(386, 604);
             this.Controls.Add(this.boxInfo);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.btnLogin);
@@ -270,7 +262,6 @@ namespace Gym_Routines
             this.Controls.Add(this.panelTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Login";

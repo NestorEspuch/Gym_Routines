@@ -128,72 +128,9 @@ namespace Gym_Routines
             }
         }
 
-        private List<Dieta> readDietaPlanSeleccionado()
+        private List<string> readPlan()
         {
-            List<Dieta> list = new List<Dieta>();
-            try
-            {
-                StreamReader file = new StreamReader("../../../data/planSeleccionado.txt");
-                string line = file.ReadLine();
-                string[] split = line.Split(',');
-
-                list.Add(new Dieta(
-                                new List<Comida>()
-                                {
-                                    new Comida(split[0],double.Parse(split[1]),double.Parse(split[2]),
-                                    double.Parse(split[3]),double.Parse(split[4])),
-                                    new Comida(split[5], double.Parse(split[6]),
-                                    double.Parse(split[7]), double.Parse(split[8]), double.Parse(split[9])),
-                                    new Comida(split[10], double.Parse(split[11]),
-                                    double.Parse(split[12]), double.Parse(split[13]), double.Parse(split[14])),
-                                    new Comida(split[15], double.Parse(split[16]),
-                                    double.Parse(split[17]), double.Parse(split[18]), double.Parse(split[19])),
-                                    new Comida(split[20], double.Parse(split[21]),
-                                    double.Parse(split[22]), double.Parse(split[23]), double.Parse(split[24]))
-                                },
-                                split[25]));
-                return list;
-            }
-            catch (IOException error)
-            {
-                textBoxInfo.Text = "Error de lectura fichero planSeleccionado.txt: " + error.Message;
-                return null;
-            }
-        }
-
-        private List<Rutina> readRutinaPlanSeleccionado()
-        {
-            List<Rutina> list = new List<Rutina>();
-            try
-            {
-                StreamReader file = new StreamReader("../../../data/planSeleccionado.txt");
-                string line = file.ReadLine();
-                line = file.ReadLine();
-                string[] split = line.Split(',');
-
-                list.Add(new Rutina(
-                                new List<Ejercicio>()
-                                {
-                                    new Ejercicio(split[0],split[1],split[2]),
-                                    new Ejercicio(split[3],split[4],split[5]),
-                                    new Ejercicio(split[6],split[7],split[8]),
-                                    new Ejercicio(split[9],split[10],split[11]),
-                                    new Ejercicio(split[12],split[13],split[14])
-                                },
-                                split[15], int.Parse(split[16])));
-                return list;
-            }
-            catch (IOException error)
-            {
-                textBoxInfo.Text = "Error de lectura fichero planSeleccionado.txt: " + error.Message;
-                return null;
-            }
-        }
-
-        private void writePlanSeleccionado(int index)
-        {
-            List<string> plan = new List<string>();
-
+            List<string> list = new List<string>();
             try
             {
                 StreamReader file = new StreamReader("../../../data/planSeleccionado.txt");
@@ -201,43 +138,104 @@ namespace Gym_Routines
 
                 while (line != null)
                 {
-                    plan.Add(line);
+                    list.Add(line);
                     line = file.ReadLine();
                 }
+
+                file.Close();
+                return list;
             }
             catch (IOException error)
             {
-                textBoxInfo.Text = "Error de lectura plan seleccionado: " + error.Message;
-            }
-
-            if (Dietas.Enabled)
-            {
-                try
-                {
-                    StreamWriter file = new StreamWriter("../../../data/planSeleccionado.txt");
-                    file.WriteLine(readDietas()[index]);
-                    file.WriteLine(plan[1]);
-                }
-                catch (IOException error)
-                {
-                    textBoxInfo.Text = "Error escritura dieta: " + error.Message;
-                }
-            }
-            else if (rutinas.Enabled)
-            {
-                try
-                {
-                    StreamWriter file = new StreamWriter("../../../data/planSeleccionado.txt");
-                    file.WriteLine(plan[0]);
-                    file.WriteLine(readRutinas()[index]);
-                }
-                catch (IOException error)
-                {
-                    textBoxInfo.Text = "Error escritura rutina: " + error.Message;
-                }
+                textBoxInfo.Text = "Error de lectura planSeleccionado.txt: " + error.Message;
+                return null;
             }
         }
-        
+
+        private void saveDietaPlan(int index)
+        {
+            List<string> list = readPlan();
+
+            try
+            {
+                StreamWriter file = new StreamWriter("../../../data/planSeleccionado.txt");
+                string text = "";
+
+                for (int i = 0; i < dataGridViewDietas.ColumnCount; i++)
+                {
+                    text += dataGridViewDietas.Rows[index].Cells[i].Value.ToString();
+                    if (i < dataGridViewDietas.ColumnCount - 1)
+                        text += ",";
+                }
+
+                file.Write(text + "\n");
+                file.Write(list[1]);
+
+                file.Close();
+                textBoxInfo.Text = "Dieta guardada";
+            }
+            catch (IOException error)
+            {
+                textBoxInfo.Text = "Error escritura planSeleccionado.txt: " + error.Message;
+            }
+        }
+
+        private void saveRutinaPlan(int index)
+        {
+            List<string> list = readPlan();
+
+            try
+            {
+                StreamWriter file = new StreamWriter("../../../data/planSeleccionado.txt");
+                string text = "";
+
+                for (int i = 0; i < dataGridViewRutinas.ColumnCount; i++)
+                {
+                    text += dataGridViewRutinas.Rows[index].Cells[i].Value.ToString();
+                    if (i < dataGridViewRutinas.ColumnCount - 1)
+                        text += ",";
+                }
+
+                file.Write(list[0] + "\n");
+                file.Write(text);
+
+                file.Close();
+                textBoxInfo.Text = "Rutina guardada";
+            }
+            catch (IOException error)
+            {
+                textBoxInfo.Text = "Error escritura planSeleccionado.txt: " + error.Message;
+            }
+        }
+
+        private List<string> savePlanInArray()
+        {
+            List<string> listStrings = readPlan();
+            List<string> result = new List<string>();
+
+            foreach (string line in listStrings)
+            {
+                string[] wordArray = line.Split(',');
+                foreach (string word in wordArray)
+                {
+                    result.Add(word);
+                }
+            }
+
+            return result;
+        }
+
+        private void writePlan(Form formulario)
+        {
+            List<string> listWords = savePlanInArray();
+            int index = listWords.Count() - 1;
+            foreach (var textBox in formulario.Controls.OfType<TextBox>())
+            {
+                textBox.Text = listWords[index];
+                index--;
+            }
+        }
+
         #region "Mostrar"       
 
         public void mostrarRutinaHipertrofia(List<Rutina> rutinas)
@@ -266,7 +264,7 @@ namespace Gym_Routines
             dtDieta.Columns.Add("T.Fats", typeof(string));
 
             foreach (Dieta d in lista)
-            {                
+            {
                 dtDieta.Rows.Add(d.GetTipo(), d.GetComidas()[0].GetNombre(), d.GetComidas()[1].GetNombre(),
                     d.GetComidas()[2].GetNombre(), d.GetComidas()[3].GetNombre(), d.GetComidas()[4].GetNombre(), d.GetTotalCalorias(),
                     d.GetTotalProteinas(), d.GetTotalHidratos(), d.GetTotalGrasas());
@@ -296,16 +294,6 @@ namespace Gym_Routines
             dataGridViewRutinas.DataSource = dtRutina;
         }
 
-        private void mostrarPlanSeleccionado(List<Dieta> dieta, List<Rutina> rutina)
-        {
-            /*
-            List<string> lista = new List<string>();
-            lista.Add(dieta[0].ToString());
-            lista.Add(rutina[0].ToString());
-
-            listBoxContenido.DataSource = lista;
-            */
-        }
         #endregion
 
         #region "Click"
@@ -334,7 +322,7 @@ namespace Gym_Routines
 
         private void Dietas_Click(object sender, EventArgs e)
         {
-            dtDietas.DefaultView.RowFilter = null;
+            dtDieta.DefaultView.RowFilter = null;
             dataGridViewRutinas.Visible = false;
             dataGridViewDietas.Visible = true;
             mostrarSubmenu(submenuDietas);
@@ -412,7 +400,19 @@ namespace Gym_Routines
 
         private void planSeleccionado_Click(object sender, EventArgs e)
         {
-            mostrarPlanSeleccionado(readDietaPlanSeleccionado(), readRutinaPlanSeleccionado());
+            PlanSeleccionado formPlan = new PlanSeleccionado();
+            formPlan.Show();
+            writePlan(formPlan);
+        }
+
+        private void dataGridViewDietas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            saveDietaPlan(e.RowIndex);
+        }
+
+        private void dataGridViewRutinas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            saveRutinaPlan(e.RowIndex);
         }
 
         #endregion

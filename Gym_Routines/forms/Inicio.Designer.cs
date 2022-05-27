@@ -30,6 +30,9 @@ namespace Gym_Routines
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuLateral = new System.Windows.Forms.Panel();
             this.textBoxInfo = new System.Windows.Forms.TextBox();
             this.planSeleccionado = new System.Windows.Forms.Button();
@@ -377,23 +380,50 @@ namespace Gym_Routines
             // dataGridViewDietas
             // 
             this.dataGridViewDietas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewDietas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(80)))), ((int)(((byte)(142)))));
             this.dataGridViewDietas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewDietas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridViewDietas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDietas.Location = new System.Drawing.Point(206, 48);
+            this.dataGridViewDietas.Location = new System.Drawing.Point(251, 93);
             this.dataGridViewDietas.Name = "dataGridViewDietas";
+            this.dataGridViewDietas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(80)))), ((int)(((byte)(142)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(123)))), ((int)(((byte)(218)))));
+            this.dataGridViewDietas.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewDietas.RowTemplate.Height = 25;
-            this.dataGridViewDietas.Size = new System.Drawing.Size(1295, 434);
+            this.dataGridViewDietas.Size = new System.Drawing.Size(1619, 927);
             this.dataGridViewDietas.TabIndex = 4;
+            this.dataGridViewDietas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDietas_CellDoubleClick);
             // 
             // dataGridViewRutinas
             // 
             this.dataGridViewRutinas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewRutinas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(80)))), ((int)(((byte)(142)))));
+            this.dataGridViewRutinas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewRutinas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(80)))), ((int)(((byte)(142)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewRutinas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewRutinas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewRutinas.Location = new System.Drawing.Point(206, 48);
+            this.dataGridViewRutinas.Location = new System.Drawing.Point(251, 93);
             this.dataGridViewRutinas.Name = "dataGridViewRutinas";
+            this.dataGridViewRutinas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(80)))), ((int)(((byte)(142)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(123)))), ((int)(((byte)(218)))));
+            this.dataGridViewRutinas.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewRutinas.RowTemplate.Height = 25;
-            this.dataGridViewRutinas.Size = new System.Drawing.Size(1295, 360);
+            this.dataGridViewRutinas.Size = new System.Drawing.Size(1619, 931);
             this.dataGridViewRutinas.TabIndex = 5;
+            this.dataGridViewRutinas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewRutinas_CellDoubleClick);
             // 
             // Inicio
             // 

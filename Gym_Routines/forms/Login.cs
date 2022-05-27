@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
+using System.Diagnostics;
 
 namespace Gym_Routines
 {
@@ -135,6 +136,10 @@ namespace Gym_Routines
         {
             WindowState = FormWindowState.Minimized;
         }
+        private void linkRRSS_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("www.linkedin.com/in/nestorespuch") { UseShellExecute = true });
+        }
 
         #endregion
 
@@ -155,6 +160,5 @@ namespace Gym_Routines
         {
             movLogin = false;
         }
-
     }
 }
