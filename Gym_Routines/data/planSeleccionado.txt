@@ -1,2 +1,2 @@
-Definicion,Lechuga,Caldo pollo,Pure calabaza,Clara huevo,Chia,1050,120,615,41
+Hipertrofia,Potro,Patata,Arroz con pollo,Salmón,Espinacas con Atún,1400,500,640,75
 Definicion,Bicicleta eliptica,Abdominales,Plancha,Sentadilla,Prensa,alta,5
